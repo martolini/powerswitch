@@ -42,8 +42,8 @@ class PowerSpider(BaseSpider):
     
     def step_three(self, response):
         hxs = HtmlXPathSelector(response)
-        post_form = {'profile[electricity_company]' : '46',
-                     'profile[electricity_plan]' : '76293',
+        post_form = {'profile[electricity_company]' : '24',
+                     'profile[electricity_plan]' : '63997',
                      'profile[fixed_terms]' : '3',
                      'profile[estimate_electricity]' : '0',
                      'profile[electricity_start_date_text]' : '1 July 2012',
@@ -51,8 +51,8 @@ class PowerSpider(BaseSpider):
                      'profile[electricity_tariffs][]' : '8000'}
         if len(hxs.select('//input[@type="radio"]').extract()) > 0:
             post_form['profile[comparing]'] = 'EG'
-            post_form['profile[gas_company]'] = '1'
-            post_form['profile[gas_plan]'] = '52576'
+            post_form['profile[gas_company]'] = '24'
+            post_form['profile[gas_plan]'] = '69296'
             post_form['profile[estimate_gas]'] = '0',
             post_form['profile[gas_start_date_text]'] = '1 July 2012',
             post_form['profile[gas_end_date_text]'] = '30 June 2013',
@@ -95,13 +95,30 @@ class PowerSpider(BaseSpider):
         hxs = HtmlXPathSelector(response)
         log.msg("Got to results with number %d and index: %s and shit %s" % (item['number'], response.meta['next']-1, hxs.select('//select[@id="profile_electricity_plan_type"]/option[@selected="selected"]/text()').extract()[0]), log.INFO)
         area = hxs.select('//div[@class="summary-cell"]/p/text()').extract()[0].strip()
-        for u in hxs.select('//td[@class="plan"]/a/@href').extract():
-            request = Request(url=u, callback=self.step_deep_results)
-            item['area'] = area
-            item['plan_category'] = hxs.select('//select[@id="profile_electricity_plan_type"]/option[@selected="selected"]/text()').extract()[0]
-            request.meta['item'] = item
-            request.meta['next'] = response.meta['next']
-            yield request
+        electricity_table = hxs.select('//table[@class="results electricity checkbox_limit"]/tbody/tr')
+        if len(electricity_table) > 0:
+            for row in electricity_table:
+                item['area'] = area
+                item['price_last_changed'] = row.select('td[@class="price_last_changed"]/text()').extract()[0].strip()
+                item['plan_category'] = hxs.select('//select[@id="profile_electricity_plan_type"]/option[@selected="selected"]/text()').extract()[0]
+                url = row.select('td[@class="plan"]/a/@href').extract()[0]
+                request = Request(url=url, callback=self.step_deep_results)
+                request.meta['item'] = item
+                request.meta['next'] = response.meta['next']
+                yield request
+                
+        gas_table = hxs.select('//table[@class="results gas checkbox_limit"]/tbody/tr')
+        if len(gas_table) > 0:
+            for row in gas_table:
+                item['area'] = area
+                item['price_last_changed'] = row.select('td[@class="price_last_changed"]/text()').extract()[0].strip()
+                item['plan_category'] = hxs.select('//select[@id="profile_electricity_plan_type"]/option[@selected="selected"]/text()').extract()[0]
+                url = row.select('td[@class="plan"]/a/@href').extract()[0]
+                request = Request(url=url, callback=self.step_deep_results)
+                request.meta['item'] = item
+                request.meta['next'] = response.meta['next']
+                yield request
+                
         result_request = Request(url=self.result_url, callback=self.pre_results, dont_filter=True)
         result_request.meta['next'] = response.meta['next']
         result_request.meta['item'] = response.meta['item']
@@ -113,6 +130,7 @@ class PowerSpider(BaseSpider):
         log.msg("Got to deep results", log.INFO)
         item = PowerItem()
         item['plan_category'] = response.meta['item']['plan_category']
+        item['price_last_changed'] = response.meta['item']['price_last_changed']
         item['area'] = response.meta['item']['area']
         item['company'] = hxs.select('//td[@class="column_of_1"]/h3/text()').extract()[0]
         item['price_total'] = hxs.select('//td[@class="plan_total"]/h4/text()').extract()[0].replace("$", "")
@@ -121,7 +139,7 @@ class PowerSpider(BaseSpider):
         item['plan_type'] = hxs.select('//td[@class="column_of_1"]/div/img/@alt').extract()[0][:2].upper()
 
         subnode = hxs.select('//table[@class="powerswitch_compare plan_details  one_col"]/tbody/tr')
-        item['price_last_changed'] = self.find_price_last_changed(subnode)
+        #item['price_last_changed'] = self.find_price_last_changed(subnode)
         item['discounts'] = self.find_discount(subnode)
         yield item
         
