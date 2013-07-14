@@ -10621,3 +10621,723 @@
 	 'start_time': datetime.datetime(2013, 7, 13, 17, 21, 3, 514483)}
 2013-07-13 13:26:57-0400 [power] INFO: Spider closed (finished)
 2013-07-13 21:32:37-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-14 14:13:31-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-14 14:13:31-0400 [power] INFO: Spider opened
+2013-07-14 14:13:31-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-14 14:13:35-0400 [scrapy] INFO: Got to step 2 with number 18 and url https://www.powerswitch.org.nz/powerswitch/step_two/e47e2ef6b115d32bc7e32837d1ac0f8d755fc7d0
+2013-07-14 14:13:39-0400 [scrapy] INFO: Got to step 3 with number 18 and url https://www.powerswitch.org.nz/powerswitch/step_three/e47e2ef6b115d32bc7e32837d1ac0f8d755fc7d0
+2013-07-14 14:13:47-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/e47e2ef6b115d32bc7e32837d1ac0f8d755fc7d0
+2013-07-14 14:13:47-0400 [scrapy] INFO: 8000  kWh 2000  kWh
+2013-07-14 14:13:55-0400 [scrapy] INFO: Got to results with number 18 and index: 0 and shit Uncontrolled (current)
+2013-07-14 14:13:56-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:13:56-0400 [power] ERROR: Error processing {'area': u'Tauranga',
+	 'company': u'Genesis Energy',
+	 'discounts': [u'Prompt Payment Discount', u'10%'],
+	 'plan': u'Classic Anytime',
+	 'plan_category': u'Uncontrolled (current)',
+	 'plan_type': u'EL',
+	 'price_total': u'2272',
+	 'tariffs': {u'Anytime': u'0.2981', u'Daily Fixed Charge': u'0.3833'}}
+	Traceback (most recent call last):
+	  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 62, in _process_chain
+	    return process_chain(self.methods[methodname], obj, *args)
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 65, in process_chain
+	    d.callback(input)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/defer.py", line 380, in callback
+	    self._startRunCallbacks(result)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/defer.py", line 488, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/Library/Python/2.7/site-packages/twisted/internet/defer.py", line 575, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/Users/martinroed/Documents/python/power/power/pipelines.py", line 88, in process_item
+	    self.insert_plan_info(cursor, info_id, item)
+	  File "/Users/martinroed/Documents/python/power/power/pipelines.py", line 68, in insert_plan_info
+	    out_id = self.doQuery(cursor, "INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category) VALUES (%d, '%s', %d, '%s', '%s')" % (info_id, item['plan_type'], int(item['price_total']), item['price_last_changed'], item['plan_category']))
+	  File "/Library/Python/2.7/site-packages/scrapy/item.py", line 49, in __getitem__
+	    return self._values[key]
+	exceptions.KeyError: 'price_last_changed'
+	
+2013-07-14 14:13:58-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:13:58-0400 [power] ERROR: Error processing {'area': u'Tauranga',
+	 'company': u'Nova Energy',
+	 'discounts': [u'Prompt Payment Discount', u'15%'],
+	 'plan': u'Standard user Anytime',
+	 'plan_category': u'Uncontrolled (current)',
+	 'plan_type': u'EL',
+	 'price_total': u'2416',
+	 'tariffs': {u'Anytime': u'0.3045',
+	             u'Daily charge': u'1.0513',
+	             u'Electricity Authority Levy': u'0.0028'}}
+	Traceback (most recent call last):
+	  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 62, in _process_chain
+	    return process_chain(self.methods[methodname], obj, *args)
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 65, in process_chain
+	    d.callback(input)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/defer.py", line 380, in callback
+	    self._startRunCallbacks(result)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/defer.py", line 488, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/Library/Python/2.7/site-packages/twisted/internet/defer.py", line 575, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/Users/martinroed/Documents/python/power/power/pipelines.py", line 88, in process_item
+	    self.insert_plan_info(cursor, info_id, item)
+	  File "/Users/martinroed/Documents/python/power/power/pipelines.py", line 68, in insert_plan_info
+	    out_id = self.doQuery(cursor, "INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category) VALUES (%d, '%s', %d, '%s', '%s')" % (info_id, item['plan_type'], int(item['price_total']), item['price_last_changed'], item['plan_category']))
+	  File "/Library/Python/2.7/site-packages/scrapy/item.py", line 49, in __getitem__
+	    return self._values[key]
+	exceptions.KeyError: 'price_last_changed'
+	
+2013-07-14 14:14:00-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:14:00-0400 [power] ERROR: Error processing {'area': u'Tauranga',
+	 'company': u'Nova Energy',
+	 'discounts': [u'Prompt Payment Discount', u'15%'],
+	 'plan': u'Low user Anytime',
+	 'plan_category': u'Uncontrolled (current)',
+	 'plan_type': u'EL',
+	 'price_total': u'2416',
+	 'tariffs': {u'Anytime': u'0.3340',
+	             u'Daily charge': u'0.4059',
+	             u'Electricity Authority Levy': u'0.0028'}}
+	Traceback (most recent call last):
+	  File "/Library/Python/2.7/site-packages/scrapy/middleware.py", line 62, in _process_chain
+	    return process_chain(self.methods[methodname], obj, *args)
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 65, in process_chain
+	    d.callback(input)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/defer.py", line 380, in callback
+	    self._startRunCallbacks(result)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/defer.py", line 488, in _startRunCallbacks
+	    self._runCallbacks()
+	--- <exception caught here> ---
+	  File "/Library/Python/2.7/site-packages/twisted/internet/defer.py", line 575, in _runCallbacks
+	    current.result = callback(current.result, *args, **kw)
+	  File "/Users/martinroed/Documents/python/power/power/pipelines.py", line 88, in process_item
+	    self.insert_plan_info(cursor, info_id, item)
+	  File "/Users/martinroed/Documents/python/power/power/pipelines.py", line 68, in insert_plan_info
+	    out_id = self.doQuery(cursor, "INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category) VALUES (%d, '%s', %d, '%s', '%s')" % (info_id, item['plan_type'], int(item['price_total']), item['price_last_changed'], item['plan_category']))
+	  File "/Library/Python/2.7/site-packages/scrapy/item.py", line 49, in __getitem__
+	    return self._values[key]
+	exceptions.KeyError: 'price_last_changed'
+	
+2013-07-14 14:14:01-0400 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2013-07-14 14:14:01-0400 [power] INFO: Closing spider (shutdown)
+2013-07-14 14:14:03-0400 [scrapy] INFO: Received SIGINT twice, forcing unclean shutdown
+2013-07-14 14:14:37-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-14 14:14:37-0400 [power] INFO: Spider opened
+2013-07-14 14:14:37-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-14 14:14:41-0400 [scrapy] INFO: Got to step 2 with number 18 and url https://www.powerswitch.org.nz/powerswitch/step_two/74258484e143a321fde172613431227cf14410dd
+2013-07-14 14:14:44-0400 [scrapy] INFO: Got to step 3 with number 18 and url https://www.powerswitch.org.nz/powerswitch/step_three/74258484e143a321fde172613431227cf14410dd
+2013-07-14 14:14:50-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/74258484e143a321fde172613431227cf14410dd
+2013-07-14 14:14:50-0400 [scrapy] INFO: 8000  kWh 2000  kWh
+2013-07-14 14:14:57-0400 [scrapy] INFO: Got to results with number 18 and index: 0 and shit Uncontrolled (current)
+2013-07-14 14:14:59-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:00-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:01-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:02-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:05-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:06-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:09-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:11-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:13-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:14-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:17-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:18-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:20-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:21-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:23-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:25-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:28-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:30-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:32-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:33-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:36-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:37-0400 [power] INFO: Crawled 25 pages (at 25 pages/min), scraped 21 items (at 21 items/min)
+2013-07-14 14:15:38-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:40-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:41-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:45-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:45-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/74258484e143a321fde172613431227cf14410dd
+2013-07-14 14:15:45-0400 [scrapy] INFO: 8000  kWh 2000  kWh
+2013-07-14 14:15:46-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:49-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:50-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:52-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:54-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:56-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:15:58-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:00-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:02-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:03-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:06-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:07-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:09-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:11-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:13-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:21-0400 [scrapy] INFO: Got to results with number 18 and index: 1 and shit All inclusive
+2013-07-14 14:16:22-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:24-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:26-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:27-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:29-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:31-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:33-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:34-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:37-0400 [power] INFO: Crawled 54 pages (at 29 pages/min), scraped 48 items (at 27 items/min)
+2013-07-14 14:16:37-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:39-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:42-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:43-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:45-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:47-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:49-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:53-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:55-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/74258484e143a321fde172613431227cf14410dd
+2013-07-14 14:16:55-0400 [scrapy] INFO: 8000  kWh Note: there may be significant additional costs associated with switching between different plan types. 2000  kWh
+2013-07-14 14:16:55-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:57-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:57-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:16:59-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:01-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:03-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:05-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:07-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:09-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:10-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:12-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:14-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:15-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:18-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:19-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:22-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:28-0400 [scrapy] INFO: Got to results with number 18 and index: 2 and shit Controlled - Peak
+2013-07-14 14:17:31-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/74258484e143a321fde172613431227cf14410dd
+2013-07-14 14:17:31-0400 [scrapy] INFO: 8000  kWh Note: there may be significant additional costs associated with switching between different plan types. 2000  kWh
+2013-07-14 14:17:32-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:34-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:36-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:37-0400 [power] INFO: Crawled 84 pages (at 30 pages/min), scraped 75 items (at 27 items/min)
+2013-07-14 14:17:38-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:40-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:43-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:48-0400 [scrapy] INFO: Got to results with number 18 and index: 3 and shit Day/night
+2013-07-14 14:17:50-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:52-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:53-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/74258484e143a321fde172613431227cf14410dd
+2013-07-14 14:17:53-0400 [scrapy] INFO: 8000  kWh Note: there may be significant additional costs associated with switching between different plan types. 2000  kWh
+2013-07-14 14:17:54-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:57-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:17:59-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:00-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:02-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:04-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:10-0400 [scrapy] INFO: Got to results with number 18 and index: 4 and shit Day/night - controlled
+2013-07-14 14:18:11-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:14-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/74258484e143a321fde172613431227cf14410dd
+2013-07-14 14:18:14-0400 [scrapy] INFO: 8000  kWh Note: there may be significant additional costs associated with switching between different plan types. 2000  kWh
+2013-07-14 14:18:15-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:22-0400 [scrapy] INFO: Got to results with number 18 and index: 5 and shit Controlled - Night
+2013-07-14 14:18:24-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:26-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:28-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:29-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:32-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:33-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:36-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:37-0400 [power] INFO: Crawled 109 pages (at 25 pages/min), scraped 95 items (at 20 items/min)
+2013-07-14 14:18:37-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:38-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:40-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:41-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:44-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:46-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:48-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:50-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:52-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:54-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:56-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:58-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:18:59-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:02-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:04-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:06-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:07-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:09-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:11-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:13-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:14-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:18-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:20-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/74258484e143a321fde172613431227cf14410dd
+2013-07-14 14:19:20-0400 [scrapy] INFO: 8000  kWh Note: there may be significant additional costs associated with switching between different plan types. 2000  kWh
+2013-07-14 14:19:21-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:23-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:24-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:31-0400 [scrapy] INFO: Got to results with number 18 and index: 6 and shit Controlled - Peak plus nightstore
+2013-07-14 14:19:34-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:34-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/74258484e143a321fde172613431227cf14410dd
+2013-07-14 14:19:34-0400 [scrapy] INFO: 8000  kWh Note: there may be significant additional costs associated with switching between different plan types. 2000  kWh
+2013-07-14 14:19:35-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:37-0400 [power] INFO: Crawled 139 pages (at 30 pages/min), scraped 122 items (at 27 items/min)
+2013-07-14 14:19:38-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:39-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:41-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:43-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:49-0400 [scrapy] INFO: Got to results with number 18 and index: 7 and shit All inclusive plus nightstore
+2013-07-14 14:19:51-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:53-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:54-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:57-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:19:58-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:00-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:03-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:04-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:06-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:08-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:10-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:11-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:13-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:16-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:19-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/74258484e143a321fde172613431227cf14410dd
+2013-07-14 14:20:19-0400 [scrapy] INFO: 8000  kWh Note: there may be significant additional costs associated with switching between different plan types. 2000  kWh
+2013-07-14 14:20:26-0400 [scrapy] INFO: Got to results with number 18 and index: 8 and shit Controlled - 17 hour
+2013-07-14 14:20:28-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:29-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:31-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:33-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:34-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:36-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:37-0400 [power] INFO: Crawled 166 pages (at 27 pages/min), scraped 146 items (at 24 items/min)
+2013-07-14 14:20:38-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:39-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:42-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:43-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:45-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:47-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:49-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:51-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:55-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:55-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/74258484e143a321fde172613431227cf14410dd
+2013-07-14 14:20:55-0400 [scrapy] INFO: 8000  kWh Note: there may be significant additional costs associated with switching between different plan types. 2000  kWh
+2013-07-14 14:20:56-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:20:58-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:00-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:02-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:05-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:06-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:09-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:10-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:11-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:13-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:15-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:17-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:18-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:19-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:22-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:23-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:26-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:32-0400 [scrapy] INFO: Got to results with number 18 and index: 9 and shit Controlled - 11 hour
+2013-07-14 14:21:35-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/74258484e143a321fde172613431227cf14410dd
+2013-07-14 14:21:35-0400 [scrapy] INFO: 8000  kWh Note: there may be significant additional costs associated with switching between different plan types. 2000  kWh
+2013-07-14 14:21:36-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:37-0400 [power] INFO: Crawled 196 pages (at 30 pages/min), scraped 173 items (at 27 items/min)
+2013-07-14 14:21:38-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:39-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:41-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:43-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:45-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:52-0400 [scrapy] INFO: Got to results with number 18 and index: 10 and shit Controlled - 17 hour with nightstore
+2013-07-14 14:21:54-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:56-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:21:58-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:00-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:01-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:04-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:06-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:07-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:09-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:12-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:13-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:15-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:17-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:21-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:22-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/74258484e143a321fde172613431227cf14410dd
+2013-07-14 14:22:22-0400 [scrapy] INFO: 8000  kWh Note: there may be significant additional costs associated with switching between different plan types. 2000  kWh
+2013-07-14 14:22:23-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:26-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:28-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:30-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:32-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:34-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:36-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:37-0400 [power] INFO: Crawled 224 pages (at 28 pages/min), scraped 199 items (at 26 items/min)
+2013-07-14 14:22:38-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:40-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:41-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:43-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:46-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:48-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:49-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:22:49-0400 [power] INFO: Closing spider (finished)
+2013-07-14 14:22:49-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 119972,
+	 'downloader/request_count': 245,
+	 'downloader/request_method_count/GET': 231,
+	 'downloader/request_method_count/POST': 14,
+	 'downloader/response_bytes': 2116689,
+	 'downloader/response_count': 245,
+	 'downloader/response_status_count/200': 231,
+	 'downloader/response_status_count/302': 14,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 14, 18, 22, 49, 577313),
+	 'item_scraped_count': 206,
+	 'log_count/INFO': 255,
+	 'request_depth_max': 24,
+	 'response_received_count': 231,
+	 'scheduler/dequeued': 245,
+	 'scheduler/dequeued/memory': 245,
+	 'scheduler/enqueued': 245,
+	 'scheduler/enqueued/memory': 245,
+	 'start_time': datetime.datetime(2013, 7, 14, 18, 14, 37, 200994)}
+2013-07-14 14:22:49-0400 [power] INFO: Spider closed (finished)
+2013-07-14 14:45:42-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-14 14:45:42-0400 [power] INFO: Spider opened
+2013-07-14 14:45:42-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-14 14:45:47-0400 [scrapy] INFO: Got to step 2 with number 18 and url https://www.powerswitch.org.nz/powerswitch/step_two/d5856cd439cc2f03d981082768078323c585447d
+2013-07-14 14:45:50-0400 [scrapy] INFO: Got to step 3 with number 18 and url https://www.powerswitch.org.nz/powerswitch/step_three/d5856cd439cc2f03d981082768078323c585447d
+2013-07-14 14:45:57-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/d5856cd439cc2f03d981082768078323c585447d
+2013-07-14 14:45:57-0400 [scrapy] INFO: 8000  kWh 2000  kWh
+2013-07-14 14:46:03-0400 [scrapy] INFO: Got to results with number 18 and index: 0 and shit Uncontrolled (current)
+2013-07-14 14:46:03-0400 [power] ERROR: Spider error processing <GET https://www.powerswitch.org.nz/powerswitch/results/d5856cd439cc2f03d981082768078323c585447d>
+	Traceback (most recent call last):
+	  File "/Library/Python/2.7/site-packages/twisted/internet/base.py", line 824, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 607, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 484, in _oneWorkUnit
+	    result = next(self._iterator)
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 57, in <genexpr>
+	    work = (callable(elem, *args, **named) for elem in iterable)
+	--- <exception caught here> ---
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+	    yield it.next()
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/offsite.py", line 28, in process_spider_output
+	    for x in result:
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/referer.py", line 22, in <genexpr>
+	    return (_set_referer(r) for r in result or ())
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/urllength.py", line 33, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/depth.py", line 50, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Users/martinroed/Documents/python/power/power/spiders/power_spider.py", line 104, in step_results
+	    request = Request(url=u, callback=self.step_deep_results)
+	exceptions.NameError: global name 'u' is not defined
+	
+2013-07-14 14:46:03-0400 [power] INFO: Closing spider (finished)
+2013-07-14 14:46:03-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 4498,
+	 'downloader/request_count': 8,
+	 'downloader/request_method_count/GET': 4,
+	 'downloader/request_method_count/POST': 4,
+	 'downloader/response_bytes': 49662,
+	 'downloader/response_count': 8,
+	 'downloader/response_status_count/200': 4,
+	 'downloader/response_status_count/302': 4,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 14, 18, 46, 3, 535293),
+	 'log_count/ERROR': 1,
+	 'log_count/INFO': 9,
+	 'request_depth_max': 3,
+	 'response_received_count': 4,
+	 'scheduler/dequeued': 8,
+	 'scheduler/dequeued/memory': 8,
+	 'scheduler/enqueued': 8,
+	 'scheduler/enqueued/memory': 8,
+	 'spider_exceptions/NameError': 1,
+	 'start_time': datetime.datetime(2013, 7, 14, 18, 45, 42, 534575)}
+2013-07-14 14:46:03-0400 [power] INFO: Spider closed (finished)
+2013-07-14 14:46:31-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-14 14:46:31-0400 [power] INFO: Spider opened
+2013-07-14 14:46:31-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-14 14:46:35-0400 [scrapy] INFO: Got to step 2 with number 18 and url https://www.powerswitch.org.nz/powerswitch/step_two/eba8ad94a0056bfecb1b8e1d3a8358fbf6af292b
+2013-07-14 14:46:39-0400 [scrapy] INFO: Got to step 3 with number 18 and url https://www.powerswitch.org.nz/powerswitch/step_three/eba8ad94a0056bfecb1b8e1d3a8358fbf6af292b
+2013-07-14 14:46:46-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/eba8ad94a0056bfecb1b8e1d3a8358fbf6af292b
+2013-07-14 14:46:46-0400 [scrapy] INFO: 8000  kWh 2000  kWh
+2013-07-14 14:46:52-0400 [scrapy] INFO: Got to results with number 18 and index: 0 and shit Uncontrolled (current)
+2013-07-14 14:46:54-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:46:54-0400 [power] ERROR: Spider error processing <GET https://www.powerswitch.org.nz/powerswitch/plan/64578/8000/2202/63997/2272?plan_amount=2202>
+	Traceback (most recent call last):
+	  File "/Library/Python/2.7/site-packages/twisted/internet/base.py", line 824, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 607, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 484, in _oneWorkUnit
+	    result = next(self._iterator)
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 57, in <genexpr>
+	    work = (callable(elem, *args, **named) for elem in iterable)
+	--- <exception caught here> ---
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+	    yield it.next()
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/offsite.py", line 28, in process_spider_output
+	    for x in result:
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/referer.py", line 22, in <genexpr>
+	    return (_set_referer(r) for r in result or ())
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/urllength.py", line 33, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/depth.py", line 50, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Users/martinroed/Documents/python/power/power/spiders/power_spider.py", line 132, in step_deep_results
+	    item['plan_category'] = response.meta['item']['plan_category']
+	  File "/Library/Python/2.7/site-packages/scrapy/item.py", line 49, in __getitem__
+	    return self._values[key]
+	exceptions.KeyError: 'plan_category'
+	
+2013-07-14 14:46:56-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:46:56-0400 [power] ERROR: Spider error processing <GET https://www.powerswitch.org.nz/powerswitch/plan/69296?plan_amount=560>
+	Traceback (most recent call last):
+	  File "/Library/Python/2.7/site-packages/twisted/internet/base.py", line 824, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 607, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 484, in _oneWorkUnit
+	    result = next(self._iterator)
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 57, in <genexpr>
+	    work = (callable(elem, *args, **named) for elem in iterable)
+	--- <exception caught here> ---
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+	    yield it.next()
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/offsite.py", line 28, in process_spider_output
+	    for x in result:
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/referer.py", line 22, in <genexpr>
+	    return (_set_referer(r) for r in result or ())
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/urllength.py", line 33, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/depth.py", line 50, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Users/martinroed/Documents/python/power/power/spiders/power_spider.py", line 132, in step_deep_results
+	    item['plan_category'] = response.meta['item']['plan_category']
+	  File "/Library/Python/2.7/site-packages/scrapy/item.py", line 49, in __getitem__
+	    return self._values[key]
+	exceptions.KeyError: 'plan_category'
+	
+2013-07-14 14:46:57-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:46:57-0400 [power] ERROR: Spider error processing <GET https://www.powerswitch.org.nz/powerswitch/plan/74850/8000/2966/63997/2272?plan_amount=2966>
+	Traceback (most recent call last):
+	  File "/Library/Python/2.7/site-packages/twisted/internet/base.py", line 824, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 607, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 484, in _oneWorkUnit
+	    result = next(self._iterator)
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 57, in <genexpr>
+	    work = (callable(elem, *args, **named) for elem in iterable)
+	--- <exception caught here> ---
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+	    yield it.next()
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/offsite.py", line 28, in process_spider_output
+	    for x in result:
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/referer.py", line 22, in <genexpr>
+	    return (_set_referer(r) for r in result or ())
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/urllength.py", line 33, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/depth.py", line 50, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Users/martinroed/Documents/python/power/power/spiders/power_spider.py", line 132, in step_deep_results
+	    item['plan_category'] = response.meta['item']['plan_category']
+	  File "/Library/Python/2.7/site-packages/scrapy/item.py", line 49, in __getitem__
+	    return self._values[key]
+	exceptions.KeyError: 'plan_category'
+	
+2013-07-14 14:46:59-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:46:59-0400 [power] ERROR: Spider error processing <GET https://www.powerswitch.org.nz/powerswitch/plan/74853/8000/2965/63997/2272?plan_amount=2965>
+	Traceback (most recent call last):
+	  File "/Library/Python/2.7/site-packages/twisted/internet/base.py", line 824, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 607, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 484, in _oneWorkUnit
+	    result = next(self._iterator)
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 57, in <genexpr>
+	    work = (callable(elem, *args, **named) for elem in iterable)
+	--- <exception caught here> ---
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+	    yield it.next()
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/offsite.py", line 28, in process_spider_output
+	    for x in result:
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/referer.py", line 22, in <genexpr>
+	    return (_set_referer(r) for r in result or ())
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/urllength.py", line 33, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/depth.py", line 50, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Users/martinroed/Documents/python/power/power/spiders/power_spider.py", line 132, in step_deep_results
+	    item['plan_category'] = response.meta['item']['plan_category']
+	  File "/Library/Python/2.7/site-packages/scrapy/item.py", line 49, in __getitem__
+	    return self._values[key]
+	exceptions.KeyError: 'plan_category'
+	
+2013-07-14 14:47:01-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:47:01-0400 [power] ERROR: Spider error processing <GET https://www.powerswitch.org.nz/powerswitch/plan/75051/8000/2866/63997/2272?plan_amount=2866>
+	Traceback (most recent call last):
+	  File "/Library/Python/2.7/site-packages/twisted/internet/base.py", line 824, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 607, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 484, in _oneWorkUnit
+	    result = next(self._iterator)
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 57, in <genexpr>
+	    work = (callable(elem, *args, **named) for elem in iterable)
+	--- <exception caught here> ---
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+	    yield it.next()
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/offsite.py", line 28, in process_spider_output
+	    for x in result:
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/referer.py", line 22, in <genexpr>
+	    return (_set_referer(r) for r in result or ())
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/urllength.py", line 33, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/depth.py", line 50, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Users/martinroed/Documents/python/power/power/spiders/power_spider.py", line 132, in step_deep_results
+	    item['plan_category'] = response.meta['item']['plan_category']
+	  File "/Library/Python/2.7/site-packages/scrapy/item.py", line 49, in __getitem__
+	    return self._values[key]
+	exceptions.KeyError: 'plan_category'
+	
+2013-07-14 14:47:02-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:47:02-0400 [power] ERROR: Spider error processing <GET https://www.powerswitch.org.nz/powerswitch/plan/75056/8000/2866/63997/2272?plan_amount=2866>
+	Traceback (most recent call last):
+	  File "/Library/Python/2.7/site-packages/twisted/internet/base.py", line 824, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 607, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 484, in _oneWorkUnit
+	    result = next(self._iterator)
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 57, in <genexpr>
+	    work = (callable(elem, *args, **named) for elem in iterable)
+	--- <exception caught here> ---
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+	    yield it.next()
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/offsite.py", line 28, in process_spider_output
+	    for x in result:
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/referer.py", line 22, in <genexpr>
+	    return (_set_referer(r) for r in result or ())
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/urllength.py", line 33, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/depth.py", line 50, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Users/martinroed/Documents/python/power/power/spiders/power_spider.py", line 132, in step_deep_results
+	    item['plan_category'] = response.meta['item']['plan_category']
+	  File "/Library/Python/2.7/site-packages/scrapy/item.py", line 49, in __getitem__
+	    return self._values[key]
+	exceptions.KeyError: 'plan_category'
+	
+2013-07-14 14:47:03-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:47:03-0400 [power] ERROR: Spider error processing <GET https://www.powerswitch.org.nz/powerswitch/plan/75046/8000/2866/63997/2272?plan_amount=2866>
+	Traceback (most recent call last):
+	  File "/Library/Python/2.7/site-packages/twisted/internet/base.py", line 824, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 607, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 484, in _oneWorkUnit
+	    result = next(self._iterator)
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 57, in <genexpr>
+	    work = (callable(elem, *args, **named) for elem in iterable)
+	--- <exception caught here> ---
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+	    yield it.next()
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/offsite.py", line 28, in process_spider_output
+	    for x in result:
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/referer.py", line 22, in <genexpr>
+	    return (_set_referer(r) for r in result or ())
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/urllength.py", line 33, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/depth.py", line 50, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Users/martinroed/Documents/python/power/power/spiders/power_spider.py", line 132, in step_deep_results
+	    item['plan_category'] = response.meta['item']['plan_category']
+	  File "/Library/Python/2.7/site-packages/scrapy/item.py", line 49, in __getitem__
+	    return self._values[key]
+	exceptions.KeyError: 'plan_category'
+	
+2013-07-14 14:47:05-0400 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2013-07-14 14:47:05-0400 [power] INFO: Closing spider (shutdown)
+2013-07-14 14:47:06-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:47:06-0400 [power] ERROR: Spider error processing <GET https://www.powerswitch.org.nz/powerswitch/plan/75061/8000/2866/63997/2272?plan_amount=2866>
+	Traceback (most recent call last):
+	  File "/Library/Python/2.7/site-packages/twisted/internet/base.py", line 824, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 607, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 484, in _oneWorkUnit
+	    result = next(self._iterator)
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 57, in <genexpr>
+	    work = (callable(elem, *args, **named) for elem in iterable)
+	--- <exception caught here> ---
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+	    yield it.next()
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/offsite.py", line 28, in process_spider_output
+	    for x in result:
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/referer.py", line 22, in <genexpr>
+	    return (_set_referer(r) for r in result or ())
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/urllength.py", line 33, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/depth.py", line 50, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Users/martinroed/Documents/python/power/power/spiders/power_spider.py", line 132, in step_deep_results
+	    item['plan_category'] = response.meta['item']['plan_category']
+	  File "/Library/Python/2.7/site-packages/scrapy/item.py", line 49, in __getitem__
+	    return self._values[key]
+	exceptions.KeyError: 'plan_category'
+	
+2013-07-14 14:47:06-0400 [scrapy] INFO: Received SIGINT twice, forcing unclean shutdown
+2013-07-14 14:47:54-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-14 14:47:54-0400 [power] INFO: Spider opened
+2013-07-14 14:47:54-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-14 14:47:58-0400 [scrapy] INFO: Got to step 2 with number 18 and url https://www.powerswitch.org.nz/powerswitch/step_two/bf67ec9bdbc2db23469a4bbfd14fb4567263a207
+2013-07-14 14:48:02-0400 [scrapy] INFO: Got to step 3 with number 18 and url https://www.powerswitch.org.nz/powerswitch/step_three/bf67ec9bdbc2db23469a4bbfd14fb4567263a207
+2013-07-14 14:48:09-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/bf67ec9bdbc2db23469a4bbfd14fb4567263a207
+2013-07-14 14:48:09-0400 [scrapy] INFO: 8000  kWh 2000  kWh
+2013-07-14 14:48:16-0400 [scrapy] INFO: Got to results with number 18 and index: 0 and shit Uncontrolled (current)
+2013-07-14 14:48:17-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:20-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:21-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:23-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:25-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:26-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:29-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:31-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:32-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:33-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:36-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:37-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:39-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:40-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:42-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:44-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:46-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:48-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:51-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:51-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:54-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:54-0400 [power] INFO: Crawled 25 pages (at 25 pages/min), scraped 21 items (at 21 items/min)
+2013-07-14 14:48:54-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:56-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:48:57-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:49:00-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:49:01-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:49:03-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:49:05-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:49:06-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:49:08-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:49:13-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:49:14-0400 [scrapy] INFO: Refining results with number 18 and url https://www.powerswitch.org.nz/powerswitch/results/bf67ec9bdbc2db23469a4bbfd14fb4567263a207
+2013-07-14 14:49:14-0400 [scrapy] INFO: 8000  kWh 2000  kWh
+2013-07-14 14:49:14-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:49:16-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:49:17-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:49:19-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:49:27-0400 [scrapy] INFO: Got to results with number 18 and index: 1 and shit All inclusive
+2013-07-14 14:49:28-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:49:30-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:49:32-0400 [scrapy] INFO: Got to deep results
+2013-07-14 14:49:35-0400 [scrapy] INFO: Got to deep results
