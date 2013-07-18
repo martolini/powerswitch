@@ -2,7 +2,6 @@ from scrapy.spider import BaseSpider
 from scrapy.http import FormRequest, Request
 from scrapy.selector import HtmlXPathSelector
 from power.items import PowerItem
-from scrapy.selector import HtmlXPathSelector
 from scrapy import log
 from random import shuffle
 
@@ -43,7 +42,7 @@ class PowerSpider(BaseSpider):
     def step_three(self, response):
         hxs = HtmlXPathSelector(response)
         post_form = {'profile[electricity_company]' : '24',
-                     'profile[electricity_plan]' : '63997',
+                     'profile[electricity_plan]' : '73458',
                      'profile[fixed_terms]' : '3',
                      'profile[estimate_electricity]' : '0',
                      'profile[electricity_start_date_text]' : '1 July 2012',
@@ -52,7 +51,7 @@ class PowerSpider(BaseSpider):
         if len(hxs.select('//input[@type="radio"]').extract()) > 0:
             post_form['profile[comparing]'] = 'EG'
             post_form['profile[gas_company]'] = '24'
-            post_form['profile[gas_plan]'] = '69296'
+            post_form['profile[gas_plan]'] = '69322'
             post_form['profile[estimate_gas]'] = '0',
             post_form['profile[gas_start_date_text]'] = '1 July 2012',
             post_form['profile[gas_end_date_text]'] = '30 June 2013',
@@ -70,7 +69,6 @@ class PowerSpider(BaseSpider):
         hxs = HtmlXPathSelector(response)
         log.msg("Refining results with number %d and url %s" % (response.meta['item']['number'], response.url), log.INFO)
         estimated_use = [x.strip() for x in hxs.select('//div[@class="group clearfix"]/p/text()').extract() if x.strip()]
-        log.msg(" ".join(estimated_use), log.INFO)
         values = [int(x) for x in hxs.select('//select[@id="profile_electricity_plan_type"]/option/@value').extract()]
         values.sort()
         index = int(response.meta['next'])
@@ -91,16 +89,20 @@ class PowerSpider(BaseSpider):
     
     
     def step_results(self, response):
-        item = response.meta['item']
+        old_item = response.meta['item']
         hxs = HtmlXPathSelector(response)
-        log.msg("Got to results with number %d and index: %s and shit %s" % (item['number'], response.meta['next']-1, hxs.select('//select[@id="profile_electricity_plan_type"]/option[@selected="selected"]/text()').extract()[0]), log.INFO)
+        log.msg("Got to results with number %d and index: %s and shit %s" % (old_item['number'], response.meta['next']-1, hxs.select('//select[@id="profile_electricity_plan_type"]/option[@selected="selected"]/text()').extract()[0]), log.INFO)
         area = hxs.select('//div[@class="summary-cell"]/p/text()').extract()[0].strip()
         electricity_table = hxs.select('//table[@class="results electricity checkbox_limit"]/tbody/tr')
         if len(electricity_table) > 0:
             for row in electricity_table:
+                item = PowerItem()
                 item['area'] = area
                 item['price_last_changed'] = row.select('td[@class="price_last_changed"]/text()').extract()[0].strip()
                 item['plan_category'] = hxs.select('//select[@id="profile_electricity_plan_type"]/option[@selected="selected"]/text()').extract()[0]
+                item['estimated_savings'] = row.select('td[@class="your_savings"]/span/text()').extract()[0].replace("$", "").replace(",","")
+                disc_text = row.select('td[@class="annual_cost"]/span/text()').extract()[0].strip()
+                item['plan_general_discount'] = disc_text[disc_text.index('$')+1:disc_text.index(" ", disc_text.index("$"))]
                 url = row.select('td[@class="plan"]/a/@href').extract()[0]
                 request = Request(url=url, callback=self.step_deep_results)
                 request.meta['item'] = item
@@ -110,9 +112,13 @@ class PowerSpider(BaseSpider):
         gas_table = hxs.select('//table[@class="results gas checkbox_limit"]/tbody/tr')
         if len(gas_table) > 0:
             for row in gas_table:
+                item = PowerItem()
                 item['area'] = area
                 item['price_last_changed'] = row.select('td[@class="price_last_changed"]/text()').extract()[0].strip()
                 item['plan_category'] = hxs.select('//select[@id="profile_electricity_plan_type"]/option[@selected="selected"]/text()').extract()[0]
+                item['estimated_savings'] = row.select('td[@class="your_savings"]/span/text()').extract()[0].replace("$", "").replace(",","")
+                disc_text = row.select('td[@class="annual_cost"]/span/text()').extract()[0].strip()
+                item['plan_general_discount'] = disc_text[disc_text.index('$')+1:disc_text.index(" ", disc_text.index("$"))]
                 url = row.select('td[@class="plan"]/a/@href').extract()[0]
                 request = Request(url=url, callback=self.step_deep_results)
                 request.meta['item'] = item
@@ -131,6 +137,8 @@ class PowerSpider(BaseSpider):
         item = PowerItem()
         item['plan_category'] = response.meta['item']['plan_category']
         item['price_last_changed'] = response.meta['item']['price_last_changed']
+        item['estimated_savings'] = response.meta['item']['estimated_savings']
+        item['plan_general_discount'] = response.meta['item']['plan_general_discount']
         item['area'] = response.meta['item']['area']
         item['company'] = hxs.select('//td[@class="column_of_1"]/h3/text()').extract()[0]
         item['price_total'] = hxs.select('//td[@class="plan_total"]/h4/text()').extract()[0].replace("$", "")
@@ -141,13 +149,69 @@ class PowerSpider(BaseSpider):
         subnode = hxs.select('//table[@class="powerswitch_compare plan_details  one_col"]/tbody/tr')
         #item['price_last_changed'] = self.find_price_last_changed(subnode)
         item['discounts'] = self.find_discount(subnode)
+        item['special_conditions'] = self.find_special_conditions(subnode)
+        item['rewards'] = self.find_rewards(subnode)
+        
+        subnode_second = hxs.select('//tbody[@class="collapse_body"]/tr')
+        item['bond_required'] = self.find_bonds(subnode_second)
+        item['price_plan_reviews'] = self.find_price_plan_reviews(subnode_second)
+        item['billing_options'] = self.find_billing_options(subnode_second)
+        item['online_services'] = self.find_online_services(subnode_second)
+        item['other_products'] = self.find_other_products(subnode_second)
+        
         yield item
         
+    def find_other_products(self, node):
+        for sub in node:
+            if 'Other products' in sub.select('th/text()').extract():
+                return "".join([x.strip() for x in sub.select('td//text()').extract() if x.strip()]).replace("'",'')
+        return 'NA'
         
+    def find_online_services(self, node):
+        for sub in node:
+            if 'Online services' in sub.select('th//text()').extract():
+                return "".join([x.strip() for x in sub.select('td//text()').extract() if x.strip()]).replace("'",'')
+        return 'NA'
+        
+    def find_billing_options(self, node):
+        for sub in node:
+            if 'Billing options' in sub.select('th/text()').extract():
+                if len(sub.select('td/text()').extract()) > 0:
+                    return sub.select('td/text()').extract()[0].replace("'",'')
+        return 'NA'
+        
+    def find_price_plan_reviews(self, node):
+        for sub in node:
+            if 'Price plan reviews' in sub.select('th/text()').extract():
+                if len(sub.select('td/text()').extract()) > 0:
+                    return sub.select('td/text()').extract()[0].replace("'",'')
+        return 'NA'
+        
+    def find_bonds(self, node):
+        for sub in node:
+            if 'Bond required?' in sub.select('th/text()').extract():
+                if len(sub.select('td/text()').extract()) > 0:
+                    return sub.select('td/text()').extract()[0].replace("'",'')
+        return 'NA'
+    
+    def find_rewards(self, node):
+        for sub in node:
+            if 'Rewards' in sub.select('th/text()').extract():
+                if len(sub.select('td/text()').extract()) > 0:
+                    return sub.select('td/text()').extract()[0].replace("'",'')
+        return 'NA'
+    
+    def find_special_conditions(self, node):
+        for sub in node:
+            if 'Special conditions' in sub.select('th/text()').extract():
+                return ' '.join([x.strip() for x in sub.select('td//text()').extract() if x.strip()]).replace("'",'')
+        return 'NA'
+    
     def find_price_last_changed(self, node):
         for sub in node:
             if 'Prices last changed' in sub.select('th/text()').extract():
-                return sub.select('td/text()').extract()[0]
+                if len(sub.select('td/text()').extract()) > 0:
+                    return sub.select('td/text()').extract()[0]
         return 'NA'
     
     def find_discount(self, node):

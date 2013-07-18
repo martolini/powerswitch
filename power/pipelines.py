@@ -22,6 +22,8 @@ class PowerPipeline(object):
             cursor.execute(query)
         except mdb.Error, e:
             log.msg("Error = %d, %s" % (e.args[0], e.args[1]), log.INFO)
+            log.msg("Query = %s" % query, log.INFO)
+
         return self.conn.insert_id() or 0
     
     def queryID(self, cursor, query):
@@ -33,9 +35,9 @@ class PowerPipeline(object):
         return 0
     
     def get_or_insert_area_id(self, cursor, item):
-        area_id = self.doQuery(cursor, "INSERT IGNORE INTO area (name) VALUES ('%s')" % item['area'])
+        area_id = self.doQuery(cursor, "INSERT IGNORE INTO area (name) VALUES ('%s')" % item['area'].replace("'",''))
         if not area_id:
-            area_id = self.queryID(cursor, "SELECT id FROM area WHERE name like '%s'" % item['area'])
+            area_id = self.queryID(cursor, "SELECT id FROM area WHERE name like '%s'" % item['area'].replace("'",''))
         return area_id
     
     def get_or_insert_company_id(self, cursor, company):
@@ -65,7 +67,7 @@ class PowerPipeline(object):
         return out_id
     
     def insert_plan_info(self, cursor, info_id, item):
-        out_id = self.doQuery(cursor, "INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category) VALUES (%d, '%s', %d, '%s', '%s')" % (info_id, item['plan_type'], int(item['price_total']), item['price_last_changed'], item['plan_category']))
+        out_id = self.doQuery(cursor, "INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category, estimated_savings, general_discount, special_conditions, rewards, bond_required, price_plan_reviews, billing_options, online_services, other_products) VALUES (%d, '%s', %d, '%s', '%s', %s, %s, '%s', '%s', '%s', '%s', '%s', '%s', '%s')" % (info_id, item['plan_type'], int(item['price_total']), item['price_last_changed'], item['plan_category'], item['estimated_savings'], item['plan_general_discount'], item['special_conditions'], item['rewards'], item['bond_required'], item['price_plan_reviews'], item['billing_options'], item['online_services'], item['other_products']))
         
     def insert_plan_tariff_info(self, cursor, tariffs, info_id):
         self.doQuery(cursor, "DELETE FROM plan_tariff WHERE plan_id = %d" % info_id)
