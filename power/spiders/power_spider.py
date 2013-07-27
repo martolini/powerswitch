@@ -25,7 +25,7 @@ class PowerSpider(BaseSpider):
     
 
     def start_requests(self):
-        if int(self.area_id) in self.excludes:
+        if int(self.area_id) in self.excludes or int(self.area_id) < 2 or int(self.area_id) > 89:
             self.should_exit = True
         log.msg("STARTING SPIDER WITH NUMBER %s" %self.area_id, log.INFO)
         requests = FormRequest(url="https://www.powerswitch.org.nz/powerswitch/step_one",
