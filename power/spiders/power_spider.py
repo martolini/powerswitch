@@ -3,7 +3,7 @@ from scrapy.http import FormRequest, Request
 from scrapy.selector import HtmlXPathSelector
 from power.items import PowerItem, AreaItem, CompanyItem, PlanItem
 from scrapy import log
-from scrapy.exceptions import CloeSpider
+from scrapy.exceptions import CloseSpider
 from random import shuffle
 import MySQLdb as mdb
 from datetime import datetime
