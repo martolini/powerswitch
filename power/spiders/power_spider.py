@@ -170,7 +170,7 @@ class PowerSpider(BaseSpider):
             
     def step_deep_results(self, response):
         hxs = HtmlXPathSelector(response)
-        # log.msg("Got to deep results", log.INFO)
+        log.msg("Updating plan with id %s" % response.meta['item']['plan_id'], log.INFO)
         item = PowerItem()
         item['area_id'] = response.meta['item']['area_id']
         item['plan_category'] = response.meta['item']['plan_category']
