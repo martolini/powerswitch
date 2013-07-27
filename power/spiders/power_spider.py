@@ -13,7 +13,7 @@ class PowerSpider(BaseSpider):
     allowed_domains = ["powerswitch.org.nz"]
     start_urls = ['https://www.powerswitch.org.nz/powerswitch/step_one']
     result_url = None
-    exludes = [20, 29, 32, 57, 66, 82, 88]
+    excludes = [20, 29, 32, 57, 66, 82, 88]
     
     
     def __init__(self, area_id):
