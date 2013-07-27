@@ -95,7 +95,6 @@ class PowerSpider(BaseSpider):
     
     def generate_new_category_request(self,index):
         if index < len(self.values):
-            log.msg('wtf')
             request = FormRequest(url=self.result_url.replace("results", "refine_results"),
                 formdata={'profile[electricity_plan_type]' : str(self.values[index]),
                 'profile[discounts][EP]' : '1',
@@ -176,11 +175,10 @@ class PowerSpider(BaseSpider):
         result_request = Request(url=self.result_url, callback=self.pre_results, dont_filter=True)
         result_request.meta['next'] = response.meta['next']
         yield self.generate_new_category_request(int(response.meta['next']))
-        
             
     def step_deep_results(self, response):
         hxs = HtmlXPathSelector(response)
-        log.msg("Updating plan with id %s" % response.meta['item']['plan_id'], log.INFO)
+        #log.msg("Updating plan with id %s" % response.meta['item']['plan_id'], log.INFO)
         item = PowerItem()
         item['area_id'] = response.meta['item']['area_id']
         item['plan_category'] = response.meta['item']['plan_category']
