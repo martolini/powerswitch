@@ -66,7 +66,7 @@ class PowerSpider(BaseSpider):
 
         item = AreaItem()
         item['area_id'] = self.area_id
-        item['area_name'] = [x.strip() for x in hxs.select('//div[@class="summary-cell"]/p/text()').extract()[0].split(" ") if x.strip()][0]
+        item['area_name'] = hxs.select('//div[@class="summary-cell"]/p/text()').extract()[0].strip() #"".join([x.strip() for x in hxs.select('//div[@class="summary-cell"]/p/text()').extract()[0].split(" ") if x.strip()])
         self.area_name = item['area_name']
         yield item
 
