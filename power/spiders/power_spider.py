@@ -4,6 +4,9 @@ from scrapy.selector import HtmlXPathSelector
 from power.items import PowerItem, AreaItem, CompanyItem, PlanItem
 from scrapy import log
 from random import shuffle
+import MySQLdb as mdb
+from datetime import datetime
+from power.settings import MYSQL_SETTINGS
 
 class PowerSpider(BaseSpider):
     name = "power"
@@ -131,7 +134,11 @@ class PowerSpider(BaseSpider):
                 request = Request(url=url, callback=self.step_deep_results)
                 request.meta['item'] = item
                 request.meta['next'] = response.meta['next']
-                yield request
+                if self.should_update_item(item):
+                    log.msg('sends request', log.INFO)
+                    yield request
+                else:
+                    log.msg('does not send request', log.INFO)
                 
         gas_table = hxs.select('//table[@class="results gas checkbox_limit"]/tbody/tr')
         if len(gas_table) > 0:
@@ -152,7 +159,8 @@ class PowerSpider(BaseSpider):
                 request = Request(url=url, callback=self.step_deep_results)
                 request.meta['item'] = item
                 request.meta['next'] = response.meta['next']
-                yield request
+                if self.should_update_item(item):
+                    yield request
                 
         result_request = Request(url=self.result_url, callback=self.pre_results, dont_filter=True)
         result_request.meta['next'] = response.meta['next']
@@ -262,6 +270,27 @@ class PowerSpider(BaseSpider):
                 price = sub.select('text()').extract()[1].strip()
             out_tariffs[h] = price
         return out_tariffs
+
+    def should_update_item(self, item):
+        conn = mdb.connect(user=MYSQL_SETTINGS['user'], 
+            passwd=MYSQL_SETTINGS['password'],
+            db=MYSQL_SETTINGS['db'],
+            host=MYSQL_SETTINGS['host'],
+            charset="utf8", 
+            use_unicode=True)
+        conn.autocommit(True)
+        cursor = conn.cursor()
+        cursor.execute("SELECT price_last_changed FROM plan_general WHERE plan_id=%s" % item['plan_id'])
+        date = cursor.fetchone()
+        conn.close()
+        if not date:
+            return True
+        date = date[0]
+        format = "%b %Y"
+        old_date = datetime.strptime(date, format)
+        new_date = datetime.strptime(item['price_last_changed'], format)
+        return new_date > old_date
+
         
         
 

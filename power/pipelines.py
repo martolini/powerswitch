@@ -9,6 +9,7 @@ from scrapy import log
 from power.items import AreaItem, PowerItem, CompanyItem, PlanItem
 from power.settings import MYSQL_SETTINGS
 
+
 class ThePipeline(object):
     def open_mysql(self):
         self.conn = mdb.connect(user=MYSQL_SETTINGS['user'], 
@@ -51,6 +52,7 @@ class ThePipeline(object):
         self.doQuery(cursor, "DELETE FROM plan_discount WHERE plan_id=%d" % info_id)
         if len(discounts) >= 2:
             self.doQuery(cursor, "INSERT INTO plan_discount (plan_id, discount_name, discount_amount) VALUES (%d, '%s', '%s')" % (info_id, discounts[0], discounts[1]))
+
 
 
     def process_item(self, item, spider):
