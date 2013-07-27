@@ -41,17 +41,17 @@ class ThePipeline(object):
         return cursor.fetchone()[0]
 
     def insert_plan_info(self, cursor, info_id, item):
-        self.doQuery(cursor, "INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category, estimated_savings, general_discount, special_conditions, rewards, bond_required, price_plan_reviews, billing_options, online_services, other_products) VALUES (%d, '%s', %d, '%s', '%s', %s, %s, '%s', '%s', '%s', '%s', '%s', '%s', '%s')" % (info_id, item['plan_type'], int(item['price_total']), item['price_last_changed'], item['plan_category'], item['estimated_savings'], item['plan_general_discount'], item['special_conditions'], item['rewards'], item['bond_required'], item['price_plan_reviews'], item['billing_options'], item['online_services'], item['other_products']))
+        self.doQuery(cursor, "INSERT IGNORE INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category, estimated_savings, general_discount, special_conditions, rewards, bond_required, price_plan_reviews, billing_options, online_services, other_products) VALUES (%d, '%s', %d, '%s', '%s', %s, %s, '%s', '%s', '%s', '%s', '%s', '%s', '%s')" % (info_id, item['plan_type'], int(item['price_total']), item['price_last_changed'], item['plan_category'], item['estimated_savings'], item['plan_general_discount'], item['special_conditions'], item['rewards'], item['bond_required'], item['price_plan_reviews'], item['billing_options'], item['online_services'], item['other_products']))
         
     def insert_plan_tariff_info(self, cursor, tariffs, info_id):
         self.doQuery(cursor, "DELETE FROM plan_tariff WHERE plan_id = %d" % info_id)
         for name, price in tariffs.iteritems():
-            self.doQuery(cursor, "INSERT INTO plan_tariff (plan_id, tariff_name, tariff_price) VALUES (%d, '%s', '%s')" % (info_id, name, price))
+            self.doQuery(cursor, "INSERT IGNORE INTO plan_tariff (plan_id, tariff_name, tariff_price) VALUES (%d, '%s', '%s')" % (info_id, name, price))
             
     def insert_plan_discount_info(self, cursor, discounts, info_id):
         self.doQuery(cursor, "DELETE FROM plan_discount WHERE plan_id=%d" % info_id)
         if len(discounts) >= 2:
-            self.doQuery(cursor, "INSERT INTO plan_discount (plan_id, discount_name, discount_amount) VALUES (%d, '%s', '%s')" % (info_id, discounts[0], discounts[1]))
+            self.doQuery(cursor, "INSERT IGNORE INTO plan_discount (plan_id, discount_name, discount_amount) VALUES (%d, '%s', '%s')" % (info_id, discounts[0], discounts[1]))
 
 
 

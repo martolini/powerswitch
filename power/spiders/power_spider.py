@@ -289,7 +289,7 @@ class PowerSpider(BaseSpider):
             use_unicode=True)
         conn.autocommit(True)
         cursor = conn.cursor()
-        cursor.execute("SELECT price_last_changed FROM plan_general WHERE plan_id=%s" % item['plan_id'])
+        cursor.execute("SELECT plan_general.price_last_changed FROM plan_general JOIN area_company_plan ON area_company_plan.id=plan_general.plan_id AND area_company_plan.area_id=%s WHERE plan_general.plan_id=%s" % (item['area_id'], item['plan_id']))
         date = cursor.fetchone()
         conn.close()
         if not date:

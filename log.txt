@@ -805,3 +805,206 @@
 	 'scheduler/enqueued/memory': 20,
 	 'start_time': datetime.datetime(2013, 7, 27, 21, 46, 44, 689601)}
 2013-07-27 17:47:32-0400 [power] INFO: Spider closed (finished)
+2013-07-27 18:05:53-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 18:05:53-0400 [power] INFO: Spider opened
+2013-07-27 18:05:53-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 18:05:53-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 4
+2013-07-27 18:06:53-0400 [power] INFO: Crawled 23 pages (at 23 pages/min), scraped 62 items (at 62 items/min)
+2013-07-27 18:07:53-0400 [power] INFO: Crawled 51 pages (at 28 pages/min), scraped 177 items (at 115 items/min)
+2013-07-27 18:08:53-0400 [power] INFO: Crawled 82 pages (at 31 pages/min), scraped 248 items (at 71 items/min)
+2013-07-27 18:09:53-0400 [power] INFO: Crawled 110 pages (at 28 pages/min), scraped 351 items (at 103 items/min)
+2013-07-27 18:10:22-0400 [power] INFO: Closing spider (finished)
+2013-07-27 18:10:22-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 67853,
+	 'downloader/request_count': 138,
+	 'downloader/request_method_count/GET': 128,
+	 'downloader/request_method_count/POST': 10,
+	 'downloader/response_bytes': 1125479,
+	 'downloader/response_count': 138,
+	 'downloader/response_status_count/200': 128,
+	 'downloader/response_status_count/302': 10,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 22, 10, 22, 345413),
+	 'item_scraped_count': 369,
+	 'log_count/INFO': 9,
+	 'request_depth_max': 10,
+	 'response_received_count': 128,
+	 'scheduler/dequeued': 138,
+	 'scheduler/dequeued/memory': 138,
+	 'scheduler/enqueued': 138,
+	 'scheduler/enqueued/memory': 138,
+	 'start_time': datetime.datetime(2013, 7, 27, 22, 5, 53, 424903)}
+2013-07-27 18:10:22-0400 [power] INFO: Spider closed (finished)
+2013-07-27 18:14:40-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 18:14:40-0400 [power] INFO: Spider opened
+2013-07-27 18:14:40-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 18:14:40-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 3
+2013-07-27 18:15:40-0400 [power] INFO: Crawled 13 pages (at 13 pages/min), scraped 266 items (at 266 items/min)
+2013-07-27 18:15:47-0400 [power] INFO: Closing spider (finished)
+2013-07-27 18:15:47-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 13644,
+	 'downloader/request_count': 25,
+	 'downloader/request_method_count/GET': 15,
+	 'downloader/request_method_count/POST': 10,
+	 'downloader/response_bytes': 184136,
+	 'downloader/response_count': 25,
+	 'downloader/response_status_count/200': 15,
+	 'downloader/response_status_count/302': 10,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 22, 15, 47, 658191),
+	 'item_scraped_count': 382,
+	 'log_count/INFO': 6,
+	 'request_depth_max': 9,
+	 'response_received_count': 15,
+	 'scheduler/dequeued': 25,
+	 'scheduler/dequeued/memory': 25,
+	 'scheduler/enqueued': 25,
+	 'scheduler/enqueued/memory': 25,
+	 'start_time': datetime.datetime(2013, 7, 27, 22, 14, 40, 934261)}
+2013-07-27 18:15:47-0400 [power] INFO: Spider closed (finished)
+2013-07-27 18:29:15-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 18:29:15-0400 [power] INFO: Spider opened
+2013-07-27 18:29:15-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 18:29:15-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 3
+2013-07-27 18:29:34-0400 [power] ERROR: Spider error processing <GET https://www.powerswitch.org.nz/powerswitch/results/07f6ca8c3868d25340301b27c949c07356644e88>
+	Traceback (most recent call last):
+	  File "/Library/Python/2.7/site-packages/twisted/internet/base.py", line 824, in runUntilCurrent
+	    call.func(*call.args, **call.kw)
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 607, in _tick
+	    taskObj._oneWorkUnit()
+	  File "/Library/Python/2.7/site-packages/twisted/internet/task.py", line 484, in _oneWorkUnit
+	    result = next(self._iterator)
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 57, in <genexpr>
+	    work = (callable(elem, *args, **named) for elem in iterable)
+	--- <exception caught here> ---
+	  File "/Library/Python/2.7/site-packages/scrapy/utils/defer.py", line 96, in iter_errback
+	    yield it.next()
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/offsite.py", line 28, in process_spider_output
+	    for x in result:
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/referer.py", line 22, in <genexpr>
+	    return (_set_referer(r) for r in result or ())
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/urllength.py", line 33, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Library/Python/2.7/site-packages/scrapy/contrib/spidermiddleware/depth.py", line 50, in <genexpr>
+	    return (r for r in result or () if _filter(r))
+	  File "/Users/martinroed/Documents/python/power/power/spiders/power_spider.py", line 150, in step_results
+	    if self.should_update_item(item):
+	  File "/Users/martinroed/Documents/python/power/power/spiders/power_spider.py", line 292, in should_update_item
+	    cursor.execute("SELECT price_last_changed FROM plan_general WHERE plan_id=%s AND area_id=%s" % (item['plan_id'], item['area_id']))
+	  File "/Library/Python/2.7/site-packages/MySQL_python-1.2.4b4-py2.7-macosx-10.8-intel.egg/MySQLdb/cursors.py", line 202, in execute
+	    self.errorhandler(self, exc, value)
+	  File "/Library/Python/2.7/site-packages/MySQL_python-1.2.4b4-py2.7-macosx-10.8-intel.egg/MySQLdb/connections.py", line 36, in defaulterrorhandler
+	    raise errorclass, errorvalue
+	_mysql_exceptions.OperationalError: (1054, "Unknown column 'area_id' in 'where clause'")
+	
+2013-07-27 18:29:34-0400 [power] INFO: Closing spider (finished)
+2013-07-27 18:29:34-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 4497,
+	 'downloader/request_count': 8,
+	 'downloader/request_method_count/GET': 4,
+	 'downloader/request_method_count/POST': 4,
+	 'downloader/response_bytes': 46211,
+	 'downloader/response_count': 8,
+	 'downloader/response_status_count/200': 4,
+	 'downloader/response_status_count/302': 4,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 22, 29, 34, 799715),
+	 'item_scraped_count': 61,
+	 'log_count/ERROR': 1,
+	 'log_count/INFO': 5,
+	 'request_depth_max': 3,
+	 'response_received_count': 4,
+	 'scheduler/dequeued': 8,
+	 'scheduler/dequeued/memory': 8,
+	 'scheduler/enqueued': 8,
+	 'scheduler/enqueued/memory': 8,
+	 'spider_exceptions/OperationalError': 1,
+	 'start_time': datetime.datetime(2013, 7, 27, 22, 29, 15, 384573)}
+2013-07-27 18:29:34-0400 [power] INFO: Spider closed (finished)
+2013-07-27 18:30:18-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 18:30:24-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 18:30:24-0400 [power] INFO: Spider opened
+2013-07-27 18:30:24-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 18:30:24-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 3
+2013-07-27 18:31:24-0400 [power] INFO: Crawled 9 pages (at 9 pages/min), scraped 313 items (at 313 items/min)
+2013-07-27 18:31:24-0400 [power] INFO: Closing spider (finished)
+2013-07-27 18:31:24-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 11286,
+	 'downloader/request_count': 20,
+	 'downloader/request_method_count/GET': 10,
+	 'downloader/request_method_count/POST': 10,
+	 'downloader/response_bytes': 141687,
+	 'downloader/response_count': 20,
+	 'downloader/response_status_count/200': 10,
+	 'downloader/response_status_count/302': 10,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 22, 31, 24, 605602),
+	 'item_scraped_count': 377,
+	 'log_count/INFO': 6,
+	 'request_depth_max': 9,
+	 'response_received_count': 10,
+	 'scheduler/dequeued': 20,
+	 'scheduler/dequeued/memory': 20,
+	 'scheduler/enqueued': 20,
+	 'scheduler/enqueued/memory': 20,
+	 'start_time': datetime.datetime(2013, 7, 27, 22, 30, 24, 299951)}
+2013-07-27 18:31:24-0400 [power] INFO: Spider closed (finished)
+2013-07-27 18:38:39-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 18:38:40-0400 [power] INFO: Spider opened
+2013-07-27 18:38:40-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 18:38:40-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 3
+2013-07-27 18:39:02-0400 [scrapy] INFO: Error = 1062, Duplicate entry '73583' for key 'PRIMARY'
+2013-07-27 18:39:02-0400 [scrapy] INFO: Query = INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category, estimated_savings, general_discount, special_conditions, rewards, bond_required, price_plan_reviews, billing_options, online_services, other_products) VALUES (73583, 'EL', 2545, 'Apr 2013', 'Uncontrolled (current)', -199, 283, 'NA', 'Rewards: A quarterly prize draw for all customers.', 'A  bond may be required.', 'NA', 'Direct Debit, Internet banking, Telephone banking,  cheque, credit card or at any PostShop. Level Pay  with a set amount paid time and regular checks to ensure the amount being paid is in line with your energy use.', 'Receive bills by email, view account history, change details, enter meter readings.', 'Provide electricity only.Two and three year fixed rate plans.')
+2013-07-27 18:39:03-0400 [scrapy] INFO: Error = 1062, Duplicate entry '76492' for key 'PRIMARY'
+2013-07-27 18:39:03-0400 [scrapy] INFO: Query = INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category, estimated_savings, general_discount, special_conditions, rewards, bond_required, price_plan_reviews, billing_options, online_services, other_products) VALUES (76492, 'EL', 2507, 'Jul 2013', 'Uncontrolled (current)', -161, 279, 'Additional benefit: Special offer Benefits: New customers receive a $30 joining credit when switching their electricity to Genesis Energy or an $80 joining credit when switching both their electricity and natural gas to Genesis Energy using Powerswitch. Condition of offer: Offer is only applicable to new Genesis Energy residential customers who switch from the Consumer Powerswitch website.  Offer is not applicable to LPG or prepaid customers and is not available in conjunction with any other Genesis Energy offer. Credit is not transferable, refundable nor redeemable for cash. Terms: Standard Acceptance criteria and Genesis Energy’s standard terms and conditions apply.', 'Rewards: Brownie Points programme for payments and use of services.', 'A bond may be required.', 'Will advise you of your past annual consumption and outline the differences between their two residential electricity pricing plans so you can check whether youre on the best plan for your household. ', 'Direct Debit/automatic payment, Internet banking, Telephone banking, cheque, credit card or at any PostShop. EvenPay with a set amount paid each month and regular checks to ensure the amount being paid is in line with your energy use.', 'Receive bills online, view account history, change details, enter meter readings, make donations to Genesis Oncology Trust.', 'Provide electricity, gas and LPG.')
+2013-07-27 18:39:05-0400 [scrapy] INFO: Error = 1062, Duplicate entry '76485' for key 'PRIMARY'
+2013-07-27 18:39:05-0400 [scrapy] INFO: Query = INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category, estimated_savings, general_discount, special_conditions, rewards, bond_required, price_plan_reviews, billing_options, online_services, other_products) VALUES (76485, 'EL', 2506, 'Jul 2013', 'Uncontrolled (current)', -160, 278, 'Additional benefit: Special offer Benefits: New customers receive a $30 joining credit when switching their electricity to Genesis Energy or an $80 joining credit when switching both their electricity and natural gas to Genesis Energy using Powerswitch. Condition of offer: Offer is only applicable to new Genesis Energy residential customers who switch from the Consumer Powerswitch website.  Offer is not applicable to LPG or prepaid customers and is not available in conjunction with any other Genesis Energy offer. Credit is not transferable, refundable nor redeemable for cash. Terms: Standard Acceptance criteria and Genesis Energy’s standard terms and conditions apply.', 'Rewards: Brownie Points programme for payments and use of services.', 'A bond may be required.', 'Will advise you of your past annual consumption and outline the differences between their two residential electricity pricing plans so you can check whether youre on the best plan for your household. ', 'Direct Debit/automatic payment, Internet banking, Telephone banking, cheque, credit card or at any PostShop. EvenPay with a set amount paid each month and regular checks to ensure the amount being paid is in line with your energy use.', 'Receive bills online, view account history, change details, enter meter readings, make donations to Genesis Oncology Trust.', 'Provide electricity, gas and LPG.')
+2013-07-27 18:39:06-0400 [scrapy] INFO: Error = 1062, Duplicate entry '71458' for key 'PRIMARY'
+2013-07-27 18:39:06-0400 [scrapy] INFO: Query = INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category, estimated_savings, general_discount, special_conditions, rewards, bond_required, price_plan_reviews, billing_options, online_services, other_products) VALUES (71458, 'EL', 2504, 'Apr 2013', 'Uncontrolled (current)', -158, 626, 'NA', 'Quarterly draws of $100 free power for Online Billing and Direct Debit customers.  ', 'A  bond may be required.', 'Price Plans are determined through customer monthly consumption and expenditure.', 'Direct Debit, Automatic Payments, Internet Banking, Telephone Banking, Credit Card (Visa/Mastercard Only), Cheque/Post and Over the Counter at any Westpac bank.', 'View power accounts and transaction history if you receive your bill via email and change email address.', 'Supply electricity only.')
+2013-07-27 18:39:08-0400 [scrapy] INFO: Error = 1062, Duplicate entry '71468' for key 'PRIMARY'
+2013-07-27 18:39:08-0400 [scrapy] INFO: Query = INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category, estimated_savings, general_discount, special_conditions, rewards, bond_required, price_plan_reviews, billing_options, online_services, other_products) VALUES (71468, 'EL', 2504, 'Apr 2013', 'Uncontrolled (current)', -158, 626, 'NA', 'Quarterly draws of $100 free power for Online Billing and Direct Debit customers.  ', 'A  bond may be required.', 'Price Plans are determined through customer monthly consumption and expenditure.', 'Direct Debit, Automatic Payments, Internet Banking, Telephone Banking, Credit Card (Visa/Mastercard Only), Cheque/Post and Over the Counter at any Westpac bank.', 'View power accounts and transaction history if you receive your bill via email and change email address.', 'Supply electricity only.')
+2013-07-27 18:39:10-0400 [scrapy] INFO: Error = 1062, Duplicate entry '70620' for key 'PRIMARY'
+2013-07-27 18:39:10-0400 [scrapy] INFO: Query = INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category, estimated_savings, general_discount, special_conditions, rewards, bond_required, price_plan_reviews, billing_options, online_services, other_products) VALUES (70620, 'EL', 2371, 'Apr 2013', 'Uncontrolled (current)', -25, 669, 'Requires online registration Benefits: 22% prompt payment discount. Conditions: Customers must join Online Services, receive their bills online AND pay their account in full on time by direct debit or internet banking (excluding credit card payments).', 'Fly Buys. Residential electricity and natural gas customers can earn 1 Fly Buys point for every $50.00 they pay on their account. Contact Rockgas LPG customers and PrePower and Time of Use accounts excluded.', '$150 bond may be required.', 'NA', 'Direct debit, internet banking, telephone banking, cheque or any Postshop. SmoothPay - Contact calculates your electricity and/or natural gas costs over a year, and divides this into weekly, fortnightly or monthly payments.', 'Customers can receive bills, get a summary of their account(s), set up a direct debit, review their transaction history for the past 12 months, compare energy use from month to month, check when their next meter reading is scheduled, and use Contacts personalised Online Home Check-up tool.', 'Provide electricity, gas and LPG.An additional 5% prompt payment discount is available for DualEnergy customers. Customers must have both electricity and gas or LPG with Contact. Excludes automotive LPG and cylinders less than 45kgs. Not available with Online Ontime discount or with PrePower or Time of Use accounts.Term contracts and price freezes offered in selected areas.')
+2013-07-27 18:39:11-0400 [scrapy] INFO: Error = 1062, Duplicate entry '70619' for key 'PRIMARY'
+2013-07-27 18:39:11-0400 [scrapy] INFO: Query = INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category, estimated_savings, general_discount, special_conditions, rewards, bond_required, price_plan_reviews, billing_options, online_services, other_products) VALUES (70619, 'EL', 2371, 'Apr 2013', 'Uncontrolled (current)', -25, 669, 'Requires online registration Benefits: 22% prompt payment discount. Conditions: Customers must join Online Services, receive their bills online AND pay their account in full on time by direct debit or internet banking (excluding credit card payments).', 'Fly Buys. Residential electricity and natural gas customers can earn 1 Fly Buys point for every $50.00 they pay on their account. Contact Rockgas LPG customers and PrePower and Time of Use accounts excluded.', '$150 bond may be required.', 'NA', 'Direct debit, internet banking, telephone banking, cheque or any Postshop. SmoothPay - Contact calculates your electricity and/or natural gas costs over a year, and divides this into weekly, fortnightly or monthly payments.', 'Customers can receive bills, get a summary of their account(s), set up a direct debit, review their transaction history for the past 12 months, compare energy use from month to month, check when their next meter reading is scheduled, and use Contacts personalised Online Home Check-up tool.', 'Provide electricity, gas and LPG.An additional 5% prompt payment discount is available for DualEnergy customers. Customers must have both electricity and gas or LPG with Contact. Excludes automotive LPG and cylinders less than 45kgs. Not available with Online Ontime discount or with PrePower or Time of Use accounts.Term contracts and price freezes offered in selected areas.')
+2013-07-27 18:39:13-0400 [scrapy] INFO: Error = 1062, Duplicate entry '73458' for key 'PRIMARY'
+2013-07-27 18:39:13-0400 [scrapy] INFO: Query = INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category, estimated_savings, general_discount, special_conditions, rewards, bond_required, price_plan_reviews, billing_options, online_services, other_products) VALUES (73458, 'EL', 2346, 'Apr 2013', 'Uncontrolled (current)', 0, 261, 'Additional benefit: Special offer Benefits: New customers receive a $30 joining credit when switching their electricity to Genesis Energy or an $80 joining credit when switching both their electricity and natural gas to Genesis Energy using Powerswitch. Condition of offer: Offer is only applicable to new Genesis Energy residential customers who switch from the Consumer Powerswitch website.  Offer is not applicable to LPG or prepaid customers and is not available in conjunction with any other Genesis Energy offer. Credit is not transferable, refundable nor redeemable for cash. Terms: Standard Acceptance criteria and Genesis Energy’s standard terms and conditions apply.', 'Rewards: Brownie Points programme for payments and use of services.', 'A bond may be required.', 'Will advise you of your past annual consumption and outline the differences between their two residential electricity pricing plans so you can check whether youre on the best plan for your household. ', 'Direct Debit/automatic payment, Internet banking, Telephone banking, cheque, credit card or at any PostShop. EvenPay with a set amount paid each month and regular checks to ensure the amount being paid is in line with your energy use.', 'Receive bills online, view account history, change details, enter meter readings, make donations to Genesis Oncology Trust.', 'Provide electricity, gas and LPG.')
+2013-07-27 18:39:15-0400 [scrapy] INFO: Error = 1062, Duplicate entry '66307' for key 'PRIMARY'
+2013-07-27 18:39:15-0400 [scrapy] INFO: Query = INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category, estimated_savings, general_discount, special_conditions, rewards, bond_required, price_plan_reviews, billing_options, online_services, other_products) VALUES (66307, 'EL', 2616, 'Aug 2012', 'Uncontrolled (current)', -270, 566, 'Requires fixed term contract Term: This plan requires the customer to sign up to either a 3 or 5 year contract. Benefits: Additional 4% (3yr) or 5% (5yr) discount on variable charge. Break fee: There is a fee of $95 for early termination of the contract. Terms: Terms and conditions apply click here for details.', 'Rewards: Monthly draws for $1,000 free power for friends customers and $100 free power for existing Bill Online customers. 
+	Quarterly draws for  $500 free power for customers paying by Direct Debit and new Power Bill Online customers.', '$150 bond may be required.', 'NA', 'Direct Debit, Automatic Payment, Internet Banking, Telephone Banking,  Credit Card Direct Debit, Cheque. SmoothPay, based on the customers past usage we will estimate how much they will spend with TrustPower over the next 12 months.  TrustPower then turn the estimated annual bill into equal amounts which are paid by Direct Debit weekly, fortnightly or monthly – the customer can choose.', 'View account balance, power accounts and transaction history, submit meter readings, change email address, select your own due date, register for power and sign up for Direct Debit.', 'Provide electricity only.Kinect, a telecommunications service developed by TrustPower for TrustPower customers. By putting your power, phone and internet together on one bill you get discounts and a one stop shop for service. (Eligibility conditions may apply)')
+2013-07-27 18:39:17-0400 [scrapy] INFO: Error = 1062, Duplicate entry '66306' for key 'PRIMARY'
+2013-07-27 18:39:17-0400 [scrapy] INFO: Query = INSERT INTO plan_general (plan_id, plan_type, price_total, price_last_changed, category, estimated_savings, general_discount, special_conditions, rewards, bond_required, price_plan_reviews, billing_options, online_services, other_products) VALUES (66306, 'EL', 2606, 'Aug 2012', 'Uncontrolled (current)', -260, 575, 'Requires fixed term contract Term: This plan requires the customer to sign up to either a 3 or 5 year contract. Benefits: Additional 4% (3yr) or 5% (5yr) discount on variable charge. Break fee: There is a fee of $95 for early termination of the contract. Terms: Terms and conditions apply click here for details.', 'Rewards: Monthly draws for $1,000 free power for friends customers and $100 free power for existing Bill Online customers. 
+	Quarterly draws for  $500 free power for customers paying by Direct Debit and new Power Bill Online customers.', '$150 bond may be required.', 'NA', 'Direct Debit, Automatic Payment, Internet Banking, Telephone Banking,  Credit Card Direct Debit, Cheque. SmoothPay, based on the customers past usage we will estimate how much they will spend with TrustPower over the next 12 months.  TrustPower then turn the estimated annual bill into equal amounts which are paid by Direct Debit weekly, fortnightly or monthly – the customer can choose.', 'View account balance, power accounts and transaction history, submit meter readings, change email address, select your own due date, register for power and sign up for Direct Debit.', 'Provide electricity only.Kinect, a telecommunications service developed by TrustPower for TrustPower customers. By putting your power, phone and internet together on one bill you get discounts and a one stop shop for service. (Eligibility conditions may apply)')
+2013-07-27 18:39:18-0400 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2013-07-27 18:39:18-0400 [power] INFO: Closing spider (shutdown)
+2013-07-27 18:39:18-0400 [scrapy] INFO: Received SIGINT twice, forcing unclean shutdown
+2013-07-27 18:39:36-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 18:39:36-0400 [power] INFO: Spider opened
+2013-07-27 18:39:36-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 18:39:36-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 3
+2013-07-27 18:40:36-0400 [power] INFO: Crawled 22 pages (at 22 pages/min), scraped 126 items (at 126 items/min)
+2013-07-27 18:41:36-0400 [power] INFO: Crawled 49 pages (at 27 pages/min), scraped 243 items (at 117 items/min)
+2013-07-27 18:42:36-0400 [power] INFO: Crawled 78 pages (at 29 pages/min), scraped 331 items (at 88 items/min)
+2013-07-27 18:43:36-0400 [power] INFO: Crawled 106 pages (at 28 pages/min), scraped 473 items (at 142 items/min)
+2013-07-27 18:44:02-0400 [power] INFO: Closing spider (finished)
+2013-07-27 18:44:02-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 64220,
+	 'downloader/request_count': 130,
+	 'downloader/request_method_count/GET': 120,
+	 'downloader/request_method_count/POST': 10,
+	 'downloader/response_bytes': 1070366,
+	 'downloader/response_count': 130,
+	 'downloader/response_status_count/200': 120,
+	 'downloader/response_status_count/302': 10,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 22, 44, 2, 647358),
+	 'item_scraped_count': 487,
+	 'log_count/INFO': 9,
+	 'request_depth_max': 10,
+	 'response_received_count': 120,
+	 'scheduler/dequeued': 130,
+	 'scheduler/dequeued/memory': 130,
+	 'scheduler/enqueued': 130,
+	 'scheduler/enqueued/memory': 130,
+	 'start_time': datetime.datetime(2013, 7, 27, 22, 39, 36, 942700)}
+2013-07-27 18:44:02-0400 [power] INFO: Spider closed (finished)
