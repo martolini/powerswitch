@@ -17,7 +17,7 @@ class PowerSpider(BaseSpider):
     excludes = [20, 29, 32, 57, 66, 82, 88]
     
     
-    def __init__(self, area_id=20):
+    def __init__(self, area_id):
         # self.areas = [x for x in range(int(start), int(stop)+1) if x not in [20, 29, 32, 57, 66, 82, 88]]
         # shuffle(self.areas)
         self.area_id = area_id
@@ -25,17 +25,18 @@ class PowerSpider(BaseSpider):
     
 
     def start_requests(self):
-        if self.area_id in self.excludes or self.area_id < 2 or self.area_id > 89:
-            raise CloseSpider('no area')
-        else:
-            log.msg("STARTING SPIDER WITH NUMBER %s" %self.area_id, log.INFO)
-            requests = FormRequest(url="https://www.powerswitch.org.nz/powerswitch/step_one",
-                    formdata={'profile[region]':str(self.area_id)},
-                    callback=self.step_two)
-            yield requests
+        if int(self.area_id) in self.excludes:
+            self.should_exit = True
+        log.msg("STARTING SPIDER WITH NUMBER %s" %self.area_id, log.INFO)
+        requests = FormRequest(url="https://www.powerswitch.org.nz/powerswitch/step_one",
+                formdata={'profile[region]':str(self.area_id)},
+                callback=self.step_two)
+        yield requests
 
         
     def step_two(self, response):
+        if self.should_exit:
+            raise CloseSpider(reason='no area')
         requests = FormRequest(url=response.url,
                     formdata={'profile[hot_water][]': 'ECL',
                               'profile[heating_main]': 'EL',
