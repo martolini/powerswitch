@@ -30,7 +30,7 @@ class PowerSpider(BaseSpider):
         requests = FormRequest(url="https://www.powerswitch.org.nz/powerswitch/step_one",
                 formdata={'profile[region]':str(self.area_id)},
                 callback=self.step_two)
-        yield requests
+        return requests
 
         
     def step_two(self, response):
