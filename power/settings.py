@@ -17,7 +17,7 @@ CONCURRENT_REQUESTS = 100
 CONCURRENT_REQUESTS_PER_DOMAIN = 100
 DOWNLOAD_DELAY = 1.5
 
-ITEM_PIPELINES = ('power.pipelines.PowerPipeline')
+ITEM_PIPELINES = ('power.pipelines.ThePipeline')
 
 
 

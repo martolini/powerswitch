@@ -6,14 +6,27 @@
 from scrapy.item import Item, Field
 from random import shuffle
 
+class AreaItem(Item):
+    area_id = Field()
+    area_name = Field()
+
+class CompanyItem(Item):
+    company_id = Field()
+    company_name = Field()
+
+class PlanItem(Item):
+    plan_name = Field()
+
+
 class PowerItem(Item):
-    number = Field()
-    area = Field()
+    area_id = Field()
+    plan = Field()
+    plan_id = Field()
     company = Field()
+
     price_total = Field()
     tariffs = Field()
     price_last_changed = Field()
-    plan = Field()
     plan_category = Field()
     plan_type = Field()
     discounts = Field()
