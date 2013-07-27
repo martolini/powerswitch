@@ -16,7 +16,7 @@ class PowerSpider(BaseSpider):
     excludes = [20, 29, 32, 57, 66, 82, 88]
     
     
-    def __init__(self, area_id):
+    def __init__(self, area_id=20):
         # self.areas = [x for x in range(int(start), int(stop)+1) if x not in [20, 29, 32, 57, 66, 82, 88]]
         # shuffle(self.areas)
         self.area_id = area_id
