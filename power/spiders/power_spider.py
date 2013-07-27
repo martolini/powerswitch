@@ -13,6 +13,7 @@ class PowerSpider(BaseSpider):
     allowed_domains = ["powerswitch.org.nz"]
     start_urls = ['https://www.powerswitch.org.nz/powerswitch/step_one']
     result_url = None
+    exludes = [20, 29, 32, 57, 66, 82, 88]
     
     
     def __init__(self, area_id):
@@ -23,6 +24,8 @@ class PowerSpider(BaseSpider):
     
 
     def start_requests(self):
+        if self.area_id in self.excludes or 2 <= self.area_id <= 89:
+            return None
         log.msg("STARTING SPIDER WITH NUMBER %s" %self.area_id, log.INFO)
         requests = FormRequest(url="https://www.powerswitch.org.nz/powerswitch/step_one",
                 formdata={'profile[region]':str(self.area_id)},
@@ -135,10 +138,7 @@ class PowerSpider(BaseSpider):
                 request.meta['item'] = item
                 request.meta['next'] = response.meta['next']
                 if self.should_update_item(item):
-                    log.msg('sends request', log.INFO)
                     yield request
-                else:
-                    log.msg('does not send request', log.INFO)
                 
         gas_table = hxs.select('//table[@class="results gas checkbox_limit"]/tbody/tr')
         if len(gas_table) > 0:

@@ -1,0 +1,379 @@
+2013-07-27 15:20:36-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 15:20:41-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 15:20:41-0400 [power] INFO: Spider opened
+2013-07-27 15:20:41-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 15:20:41-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 73458
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 70327
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 70328
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 65756
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 65751
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 73719
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 76521
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 76526
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 65599
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 65594
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 73723
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 74369
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 74373
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 65716
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 65711
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 70038
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 70042
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 72215
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 72207
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 70329
+2013-07-27 15:21:00-0400 [scrapy] INFO: does not send request for id 70326
+2013-07-27 15:21:09-0400 [scrapy] INFO: does not send request for id 73458
+2013-07-27 15:21:09-0400 [scrapy] INFO: does not send request for id 70323
+2013-07-27 15:21:09-0400 [scrapy] INFO: does not send request for id 70324
+2013-07-27 15:21:09-0400 [scrapy] INFO: does not send request for id 65758
+2013-07-27 15:21:09-0400 [scrapy] INFO: does not send request for id 65753
+2013-07-27 15:21:09-0400 [scrapy] INFO: does not send request for id 73722
+2013-07-27 15:21:09-0400 [scrapy] INFO: does not send request for id 76524
+2013-07-27 15:21:09-0400 [scrapy] INFO: does not send request for id 76529
+2013-07-27 15:21:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:09-0400 [scrapy] INFO: does not send request for id 70041
+2013-07-27 15:21:09-0400 [scrapy] INFO: does not send request for id 70325
+2013-07-27 15:21:10-0400 [scrapy] INFO: does not send request for id 70322
+2013-07-27 15:21:17-0400 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2013-07-27 15:21:17-0400 [power] INFO: Closing spider (shutdown)
+2013-07-27 15:21:17-0400 [scrapy] INFO: Received SIGINT twice, forcing unclean shutdown
+2013-07-27 15:21:23-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 15:21:24-0400 [power] INFO: Spider opened
+2013-07-27 15:21:24-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 15:21:24-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:21:42-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:24-0400 [power] INFO: Crawled 26 pages (at 26 pages/min), scraped 65 items (at 65 items/min)
+2013-07-27 15:22:29-0400 [scrapy] INFO: does not send request for id 73458
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:22:29-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: does not send request for id 73458
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:12-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:24-0400 [power] INFO: Crawled 54 pages (at 28 pages/min), scraped 175 items (at 110 items/min)
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: does not send request for id 73458
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:23:56-0400 [scrapy] INFO: sends request
+2013-07-27 15:24:24-0400 [power] INFO: Crawled 85 pages (at 31 pages/min), scraped 247 items (at 72 items/min)
+2013-07-27 15:24:38-0400 [scrapy] INFO: does not send request for id 73458
+2013-07-27 15:24:38-0400 [scrapy] INFO: sends request
+2013-07-27 15:24:38-0400 [scrapy] INFO: sends request
+2013-07-27 15:24:38-0400 [scrapy] INFO: sends request
+2013-07-27 15:24:38-0400 [scrapy] INFO: sends request
+2013-07-27 15:24:38-0400 [scrapy] INFO: sends request
+2013-07-27 15:24:38-0400 [scrapy] INFO: sends request
+2013-07-27 15:24:38-0400 [scrapy] INFO: sends request
+2013-07-27 15:24:38-0400 [scrapy] INFO: sends request
+2013-07-27 15:24:38-0400 [scrapy] INFO: sends request
+2013-07-27 15:24:38-0400 [scrapy] INFO: sends request
+2013-07-27 15:25:03-0400 [scrapy] INFO: does not send request for id 73458
+2013-07-27 15:25:03-0400 [scrapy] INFO: sends request
+2013-07-27 15:25:11-0400 [scrapy] INFO: does not send request for id 73458
+2013-07-27 15:25:11-0400 [scrapy] INFO: sends request
+2013-07-27 15:25:11-0400 [scrapy] INFO: sends request
+2013-07-27 15:25:17-0400 [power] INFO: Closing spider (finished)
+2013-07-27 15:25:17-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 59735,
+	 'downloader/request_count': 121,
+	 'downloader/request_method_count/GET': 111,
+	 'downloader/request_method_count/POST': 10,
+	 'downloader/response_bytes': 1013916,
+	 'downloader/response_count': 121,
+	 'downloader/response_status_count/200': 111,
+	 'downloader/response_status_count/302': 10,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 19, 25, 17, 526167),
+	 'item_scraped_count': 302,
+	 'log_count/INFO': 108,
+	 'request_depth_max': 16,
+	 'response_received_count': 111,
+	 'scheduler/dequeued': 121,
+	 'scheduler/dequeued/memory': 121,
+	 'scheduler/enqueued': 121,
+	 'scheduler/enqueued/memory': 121,
+	 'start_time': datetime.datetime(2013, 7, 27, 19, 21, 24, 282776)}
+2013-07-27 15:25:17-0400 [power] INFO: Spider closed (finished)
+2013-07-27 15:32:03-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 15:32:04-0400 [power] INFO: Spider opened
+2013-07-27 15:32:04-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 15:32:04-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:32:23-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:04-0400 [power] INFO: Crawled 26 pages (at 26 pages/min), scraped 65 items (at 65 items/min)
+2013-07-27 15:33:08-0400 [scrapy] INFO: does not send request for id 73458 date Apr 2013
+2013-07-27 15:33:08-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:08-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:08-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:08-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:08-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:08-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:08-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:08-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:08-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:08-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:08-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:08-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:09-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: does not send request for id 73458 date Apr 2013
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:52-0400 [scrapy] INFO: sends request
+2013-07-27 15:33:58-0400 [scrapy] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2013-07-27 15:33:58-0400 [power] INFO: Closing spider (shutdown)
+2013-07-27 15:33:58-0400 [scrapy] INFO: Received SIGINT twice, forcing unclean shutdown
+2013-07-27 15:35:23-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 15:35:23-0400 [power] INFO: Spider opened
+2013-07-27 15:35:23-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 15:35:23-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:35:41-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:23-0400 [power] INFO: Crawled 26 pages (at 26 pages/min), scraped 65 items (at 65 items/min)
+2013-07-27 15:36:28-0400 [scrapy] INFO: does not send request for id 73458 date All inclusive 261
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:36:28-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: does not send request for id 73458 date Controlled - Peak 261
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:15-0400 [scrapy] INFO: sends request
+2013-07-27 15:37:23-0400 [power] INFO: Crawled 53 pages (at 27 pages/min), scraped 174 items (at 109 items/min)
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: does not send request for id 73458 date Day/night 261
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:01-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:23-0400 [power] INFO: Crawled 82 pages (at 29 pages/min), scraped 244 items (at 70 items/min)
+2013-07-27 15:38:45-0400 [scrapy] INFO: does not send request for id 73458 date Day/night - controlled 261
+2013-07-27 15:38:45-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:45-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:45-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:45-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:45-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:45-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:45-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:45-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:45-0400 [scrapy] INFO: sends request
+2013-07-27 15:38:45-0400 [scrapy] INFO: sends request
+2013-07-27 15:39:08-0400 [scrapy] INFO: does not send request for id 73458 date Prepaid 261
+2013-07-27 15:39:08-0400 [scrapy] INFO: sends request
+2013-07-27 15:39:17-0400 [scrapy] INFO: does not send request for id 73458 date Controlled - Night 261
+2013-07-27 15:39:17-0400 [scrapy] INFO: sends request
+2013-07-27 15:39:17-0400 [scrapy] INFO: sends request
+2013-07-27 15:39:22-0400 [power] INFO: Closing spider (finished)
+2013-07-27 15:39:22-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 59735,
+	 'downloader/request_count': 121,
+	 'downloader/request_method_count/GET': 111,
+	 'downloader/request_method_count/POST': 10,
+	 'downloader/response_bytes': 1014018,
+	 'downloader/response_count': 121,
+	 'downloader/response_status_count/200': 111,
+	 'downloader/response_status_count/302': 10,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 19, 39, 22, 531757),
+	 'item_scraped_count': 302,
+	 'log_count/INFO': 108,
+	 'request_depth_max': 16,
+	 'response_received_count': 111,
+	 'scheduler/dequeued': 121,
+	 'scheduler/dequeued/memory': 121,
+	 'scheduler/enqueued': 121,
+	 'scheduler/enqueued/memory': 121,
+	 'start_time': datetime.datetime(2013, 7, 27, 19, 35, 23, 625195)}
+2013-07-27 15:39:22-0400 [power] INFO: Spider closed (finished)
