@@ -20,12 +20,11 @@ class PowerSpider(BaseSpider):
         # self.areas = [x for x in range(int(start), int(stop)+1) if x not in [20, 29, 32, 57, 66, 82, 88]]
         # shuffle(self.areas)
         self.area_id = area_id
-        log.msg(self.area_id, log.INFO)
         log.start()
     
 
     def start_requests(self):
-        if self.area_id in self.excludes or 2 <= self.area_id <= 89:
+        if self.area_id in self.excludes or self.area_id < 2 or self.area_id > 89:
             yield None
         else:
             log.msg("STARTING SPIDER WITH NUMBER %s" %self.area_id, log.INFO)
