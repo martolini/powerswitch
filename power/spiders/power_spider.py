@@ -3,6 +3,7 @@ from scrapy.http import FormRequest, Request
 from scrapy.selector import HtmlXPathSelector
 from power.items import PowerItem, AreaItem, CompanyItem, PlanItem
 from scrapy import log
+from scrapy.exceptions import CloeSpider
 from random import shuffle
 import MySQLdb as mdb
 from datetime import datetime
@@ -25,7 +26,7 @@ class PowerSpider(BaseSpider):
 
     def start_requests(self):
         if self.area_id in self.excludes or self.area_id < 2 or self.area_id > 89:
-            yield None
+            raise CloseSpider('no area')
         else:
             log.msg("STARTING SPIDER WITH NUMBER %s" %self.area_id, log.INFO)
             requests = FormRequest(url="https://www.powerswitch.org.nz/powerswitch/step_one",
