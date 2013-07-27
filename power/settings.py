@@ -19,6 +19,13 @@ DOWNLOAD_DELAY = 1.5
 
 ITEM_PIPELINES = ('power.pipelines.ThePipeline')
 
+MYSQL_SETTINGS = {
+	'user': 'root',
+	'password': 'root',
+	'host': '127.0.0.1',
+	'db': 'power',
+}
+
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

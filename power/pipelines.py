@@ -7,10 +7,16 @@ import MySQLdb as mdb
 from contextlib import closing
 from scrapy import log
 from power.items import AreaItem, PowerItem, CompanyItem, PlanItem
+from power.settings import MYSQL_SETTINGS
 
 class ThePipeline(object):
     def open_mysql(self):
-        self.conn = mdb.connect(user='root', passwd='root', db='power', host='127.0.0.1', charset="utf8", use_unicode=True)
+        self.conn = mdb.connect(user=MYSQL_SETTINGS['user'], 
+            passwd=MYSQL_SETTINGS['password'],
+            db=MYSQL_SETTINGS['db'],
+            host=MYSQL_SETTINGS['host'],
+            charset="utf8", 
+            use_unicode=True)
         self.conn.autocommit(True)
         
     def close_mysql(self):
