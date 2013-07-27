@@ -21,6 +21,7 @@ class PowerSpider(BaseSpider):
         # self.areas = [x for x in range(int(start), int(stop)+1) if x not in [20, 29, 32, 57, 66, 82, 88]]
         # shuffle(self.areas)
         self.area_id = area_id
+        self.should_exit = False
         log.start()
     
 
