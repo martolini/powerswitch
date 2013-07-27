@@ -25,12 +25,13 @@ class PowerSpider(BaseSpider):
 
     def start_requests(self):
         if self.area_id in self.excludes or 2 <= self.area_id <= 89:
-            return None
-        log.msg("STARTING SPIDER WITH NUMBER %s" %self.area_id, log.INFO)
-        requests = FormRequest(url="https://www.powerswitch.org.nz/powerswitch/step_one",
-                formdata={'profile[region]':str(self.area_id)},
-                callback=self.step_two)
-        return requests
+            yield None
+        else:
+            log.msg("STARTING SPIDER WITH NUMBER %s" %self.area_id, log.INFO)
+            requests = FormRequest(url="https://www.powerswitch.org.nz/powerswitch/step_one",
+                    formdata={'profile[region]':str(self.area_id)},
+                    callback=self.step_two)
+            yield requests
 
         
     def step_two(self, response):
