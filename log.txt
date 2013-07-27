@@ -377,3 +377,431 @@
 	 'scheduler/enqueued/memory': 121,
 	 'start_time': datetime.datetime(2013, 7, 27, 19, 35, 23, 625195)}
 2013-07-27 15:39:22-0400 [power] INFO: Spider closed (finished)
+2013-07-27 17:26:42-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 17:26:42-0400 [power] INFO: Spider opened
+2013-07-27 17:26:42-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 17:26:42-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 17:26:56-0400 [power] INFO: Closing spider (finished)
+2013-07-27 17:26:56-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 3131,
+	 'downloader/request_count': 6,
+	 'downloader/request_method_count/GET': 3,
+	 'downloader/request_method_count/POST': 3,
+	 'downloader/response_bytes': 29068,
+	 'downloader/response_count': 6,
+	 'downloader/response_status_count/200': 3,
+	 'downloader/response_status_count/302': 3,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 21, 26, 56, 588527),
+	 'item_scraped_count': 1,
+	 'log_count/INFO': 5,
+	 'request_depth_max': 2,
+	 'response_received_count': 3,
+	 'scheduler/dequeued': 6,
+	 'scheduler/dequeued/memory': 6,
+	 'scheduler/enqueued': 6,
+	 'scheduler/enqueued/memory': 6,
+	 'start_time': datetime.datetime(2013, 7, 27, 21, 26, 42, 651141)}
+2013-07-27 17:26:56-0400 [power] INFO: Spider closed (finished)
+2013-07-27 17:29:35-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 17:29:35-0400 [power] INFO: Spider opened
+2013-07-27 17:29:35-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 17:29:35-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 17:29:49-0400 [power] INFO: Closing spider (finished)
+2013-07-27 17:29:49-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 3131,
+	 'downloader/request_count': 6,
+	 'downloader/request_method_count/GET': 3,
+	 'downloader/request_method_count/POST': 3,
+	 'downloader/response_bytes': 29060,
+	 'downloader/response_count': 6,
+	 'downloader/response_status_count/200': 3,
+	 'downloader/response_status_count/302': 3,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 21, 29, 49, 435623),
+	 'item_scraped_count': 1,
+	 'log_count/INFO': 5,
+	 'request_depth_max': 2,
+	 'response_received_count': 3,
+	 'scheduler/dequeued': 6,
+	 'scheduler/dequeued/memory': 6,
+	 'scheduler/enqueued': 6,
+	 'scheduler/enqueued/memory': 6,
+	 'start_time': datetime.datetime(2013, 7, 27, 21, 29, 35, 375973)}
+2013-07-27 17:29:49-0400 [power] INFO: Spider closed (finished)
+2013-07-27 17:30:05-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 17:30:05-0400 [power] INFO: Spider opened
+2013-07-27 17:30:05-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 17:30:05-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 17:30:18-0400 [power] INFO: Closing spider (finished)
+2013-07-27 17:30:18-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 3131,
+	 'downloader/request_count': 6,
+	 'downloader/request_method_count/GET': 3,
+	 'downloader/request_method_count/POST': 3,
+	 'downloader/response_bytes': 29063,
+	 'downloader/response_count': 6,
+	 'downloader/response_status_count/200': 3,
+	 'downloader/response_status_count/302': 3,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 21, 30, 18, 619214),
+	 'item_scraped_count': 1,
+	 'log_count/INFO': 5,
+	 'request_depth_max': 2,
+	 'response_received_count': 3,
+	 'scheduler/dequeued': 6,
+	 'scheduler/dequeued/memory': 6,
+	 'scheduler/enqueued': 6,
+	 'scheduler/enqueued/memory': 6,
+	 'start_time': datetime.datetime(2013, 7, 27, 21, 30, 5, 190370)}
+2013-07-27 17:30:18-0400 [power] INFO: Spider closed (finished)
+2013-07-27 17:31:36-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 17:31:37-0400 [power] INFO: Spider opened
+2013-07-27 17:31:37-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 17:31:37-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 17:31:49-0400 [power] INFO: Closing spider (finished)
+2013-07-27 17:31:49-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 3131,
+	 'downloader/request_count': 6,
+	 'downloader/request_method_count/GET': 3,
+	 'downloader/request_method_count/POST': 3,
+	 'downloader/response_bytes': 29067,
+	 'downloader/response_count': 6,
+	 'downloader/response_status_count/200': 3,
+	 'downloader/response_status_count/302': 3,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 21, 31, 49, 857090),
+	 'item_scraped_count': 1,
+	 'log_count/INFO': 5,
+	 'request_depth_max': 2,
+	 'response_received_count': 3,
+	 'scheduler/dequeued': 6,
+	 'scheduler/dequeued/memory': 6,
+	 'scheduler/enqueued': 6,
+	 'scheduler/enqueued/memory': 6,
+	 'start_time': datetime.datetime(2013, 7, 27, 21, 31, 37, 93635)}
+2013-07-27 17:31:49-0400 [power] INFO: Spider closed (finished)
+2013-07-27 17:32:07-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 17:32:07-0400 [power] INFO: Spider opened
+2013-07-27 17:32:07-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 17:32:07-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 17:32:20-0400 [scrapy] INFO: bla
+2013-07-27 17:32:20-0400 [power] INFO: Closing spider (finished)
+2013-07-27 17:32:20-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 3131,
+	 'downloader/request_count': 6,
+	 'downloader/request_method_count/GET': 3,
+	 'downloader/request_method_count/POST': 3,
+	 'downloader/response_bytes': 29062,
+	 'downloader/response_count': 6,
+	 'downloader/response_status_count/200': 3,
+	 'downloader/response_status_count/302': 3,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 21, 32, 20, 579930),
+	 'item_scraped_count': 1,
+	 'log_count/INFO': 6,
+	 'request_depth_max': 2,
+	 'response_received_count': 3,
+	 'scheduler/dequeued': 6,
+	 'scheduler/dequeued/memory': 6,
+	 'scheduler/enqueued': 6,
+	 'scheduler/enqueued/memory': 6,
+	 'start_time': datetime.datetime(2013, 7, 27, 21, 32, 7, 505050)}
+2013-07-27 17:32:20-0400 [power] INFO: Spider closed (finished)
+2013-07-27 17:32:48-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 17:32:48-0400 [power] INFO: Spider opened
+2013-07-27 17:32:48-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 17:32:48-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 17:33:02-0400 [scrapy] INFO: bla
+2013-07-27 17:33:02-0400 [power] INFO: Closing spider (finished)
+2013-07-27 17:33:02-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 3131,
+	 'downloader/request_count': 6,
+	 'downloader/request_method_count/GET': 3,
+	 'downloader/request_method_count/POST': 3,
+	 'downloader/response_bytes': 29074,
+	 'downloader/response_count': 6,
+	 'downloader/response_status_count/200': 3,
+	 'downloader/response_status_count/302': 3,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 21, 33, 2, 50673),
+	 'item_scraped_count': 1,
+	 'log_count/INFO': 6,
+	 'request_depth_max': 2,
+	 'response_received_count': 3,
+	 'scheduler/dequeued': 6,
+	 'scheduler/dequeued/memory': 6,
+	 'scheduler/enqueued': 6,
+	 'scheduler/enqueued/memory': 6,
+	 'start_time': datetime.datetime(2013, 7, 27, 21, 32, 48, 517216)}
+2013-07-27 17:33:02-0400 [power] INFO: Spider closed (finished)
+2013-07-27 17:33:32-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 17:33:33-0400 [power] INFO: Spider opened
+2013-07-27 17:33:33-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 17:33:33-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 17:33:46-0400 [scrapy] INFO: bla
+2013-07-27 17:33:46-0400 [power] INFO: Closing spider (finished)
+2013-07-27 17:33:46-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 3131,
+	 'downloader/request_count': 6,
+	 'downloader/request_method_count/GET': 3,
+	 'downloader/request_method_count/POST': 3,
+	 'downloader/response_bytes': 29073,
+	 'downloader/response_count': 6,
+	 'downloader/response_status_count/200': 3,
+	 'downloader/response_status_count/302': 3,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 21, 33, 46, 640249),
+	 'item_scraped_count': 1,
+	 'log_count/INFO': 6,
+	 'request_depth_max': 2,
+	 'response_received_count': 3,
+	 'scheduler/dequeued': 6,
+	 'scheduler/dequeued/memory': 6,
+	 'scheduler/enqueued': 6,
+	 'scheduler/enqueued/memory': 6,
+	 'start_time': datetime.datetime(2013, 7, 27, 21, 33, 33, 3453)}
+2013-07-27 17:33:46-0400 [power] INFO: Spider closed (finished)
+2013-07-27 17:34:33-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 17:34:33-0400 [power] INFO: Spider opened
+2013-07-27 17:34:33-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 17:34:33-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 17:35:33-0400 [power] INFO: Crawled 13 pages (at 13 pages/min), scraped 196 items (at 196 items/min)
+2013-07-27 17:35:44-0400 [power] INFO: Closing spider (finished)
+2013-07-27 17:35:44-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 14450,
+	 'downloader/request_count': 27,
+	 'downloader/request_method_count/GET': 17,
+	 'downloader/request_method_count/POST': 10,
+	 'downloader/response_bytes': 220371,
+	 'downloader/response_count': 27,
+	 'downloader/response_status_count/200': 17,
+	 'downloader/response_status_count/302': 10,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 21, 35, 44, 238949),
+	 'item_scraped_count': 208,
+	 'log_count/INFO': 6,
+	 'request_depth_max': 16,
+	 'response_received_count': 17,
+	 'scheduler/dequeued': 27,
+	 'scheduler/dequeued/memory': 27,
+	 'scheduler/enqueued': 27,
+	 'scheduler/enqueued/memory': 27,
+	 'start_time': datetime.datetime(2013, 7, 27, 21, 34, 33, 219757)}
+2013-07-27 17:35:44-0400 [power] INFO: Spider closed (finished)
+2013-07-27 17:35:58-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 17:35:58-0400 [power] INFO: Spider opened
+2013-07-27 17:35:58-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 17:35:58-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 17:36:11-0400 [scrapy] INFO: bla
+2013-07-27 17:36:11-0400 [power] INFO: Closing spider (finished)
+2013-07-27 17:36:11-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 3131,
+	 'downloader/request_count': 6,
+	 'downloader/request_method_count/GET': 3,
+	 'downloader/request_method_count/POST': 3,
+	 'downloader/response_bytes': 29064,
+	 'downloader/response_count': 6,
+	 'downloader/response_status_count/200': 3,
+	 'downloader/response_status_count/302': 3,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 21, 36, 11, 593391),
+	 'item_scraped_count': 1,
+	 'log_count/INFO': 6,
+	 'request_depth_max': 2,
+	 'response_received_count': 3,
+	 'scheduler/dequeued': 6,
+	 'scheduler/dequeued/memory': 6,
+	 'scheduler/enqueued': 6,
+	 'scheduler/enqueued/memory': 6,
+	 'start_time': datetime.datetime(2013, 7, 27, 21, 35, 58, 326948)}
+2013-07-27 17:36:11-0400 [power] INFO: Spider closed (finished)
+2013-07-27 17:36:42-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 17:36:42-0400 [power] INFO: Spider opened
+2013-07-27 17:36:42-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 17:36:42-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 17:36:55-0400 [scrapy] INFO: bla
+2013-07-27 17:36:55-0400 [power] INFO: Closing spider (finished)
+2013-07-27 17:36:55-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 3131,
+	 'downloader/request_count': 6,
+	 'downloader/request_method_count/GET': 3,
+	 'downloader/request_method_count/POST': 3,
+	 'downloader/response_bytes': 29066,
+	 'downloader/response_count': 6,
+	 'downloader/response_status_count/200': 3,
+	 'downloader/response_status_count/302': 3,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 21, 36, 55, 523156),
+	 'item_scraped_count': 1,
+	 'log_count/INFO': 6,
+	 'request_depth_max': 2,
+	 'response_received_count': 3,
+	 'scheduler/dequeued': 6,
+	 'scheduler/dequeued/memory': 6,
+	 'scheduler/enqueued': 6,
+	 'scheduler/enqueued/memory': 6,
+	 'start_time': datetime.datetime(2013, 7, 27, 21, 36, 42, 383730)}
+2013-07-27 17:36:55-0400 [power] INFO: Spider closed (finished)
+2013-07-27 17:38:47-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 17:38:47-0400 [power] INFO: Spider opened
+2013-07-27 17:38:47-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 17:38:47-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 17:39:47-0400 [power] INFO: Crawled 14 pages (at 14 pages/min), scraped 200 items (at 200 items/min)
+2013-07-27 17:39:54-0400 [power] INFO: Closing spider (finished)
+2013-07-27 17:39:54-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 14450,
+	 'downloader/request_count': 27,
+	 'downloader/request_method_count/GET': 17,
+	 'downloader/request_method_count/POST': 10,
+	 'downloader/response_bytes': 220403,
+	 'downloader/response_count': 27,
+	 'downloader/response_status_count/200': 17,
+	 'downloader/response_status_count/302': 10,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 21, 39, 54, 464733),
+	 'item_scraped_count': 208,
+	 'log_count/INFO': 6,
+	 'request_depth_max': 16,
+	 'response_received_count': 17,
+	 'scheduler/dequeued': 27,
+	 'scheduler/dequeued/memory': 27,
+	 'scheduler/enqueued': 27,
+	 'scheduler/enqueued/memory': 27,
+	 'start_time': datetime.datetime(2013, 7, 27, 21, 38, 47, 297564)}
+2013-07-27 17:39:54-0400 [power] INFO: Spider closed (finished)
+2013-07-27 17:40:36-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 17:40:36-0400 [power] INFO: Spider opened
+2013-07-27 17:40:36-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 17:40:36-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 17:40:49-0400 [scrapy] INFO: wtf
+2013-07-27 17:40:57-0400 [scrapy] INFO: wtf
+2013-07-27 17:41:06-0400 [scrapy] INFO: wtf
+2013-07-27 17:41:15-0400 [scrapy] INFO: wtf
+2013-07-27 17:41:23-0400 [scrapy] INFO: wtf
+2013-07-27 17:41:29-0400 [scrapy] INFO: wtf
+2013-07-27 17:41:36-0400 [scrapy] INFO: wtf
+2013-07-27 17:41:36-0400 [power] INFO: Crawled 15 pages (at 15 pages/min), scraped 201 items (at 201 items/min)
+2013-07-27 17:41:43-0400 [power] INFO: Closing spider (finished)
+2013-07-27 17:41:43-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 14450,
+	 'downloader/request_count': 27,
+	 'downloader/request_method_count/GET': 17,
+	 'downloader/request_method_count/POST': 10,
+	 'downloader/response_bytes': 220404,
+	 'downloader/response_count': 27,
+	 'downloader/response_status_count/200': 17,
+	 'downloader/response_status_count/302': 10,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 21, 41, 43, 49402),
+	 'item_scraped_count': 208,
+	 'log_count/INFO': 13,
+	 'request_depth_max': 16,
+	 'response_received_count': 17,
+	 'scheduler/dequeued': 27,
+	 'scheduler/dequeued/memory': 27,
+	 'scheduler/enqueued': 27,
+	 'scheduler/enqueued/memory': 27,
+	 'start_time': datetime.datetime(2013, 7, 27, 21, 40, 36, 582737)}
+2013-07-27 17:41:43-0400 [power] INFO: Spider closed (finished)
+2013-07-27 17:42:32-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 17:42:32-0400 [power] INFO: Spider opened
+2013-07-27 17:42:32-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 17:42:32-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 17:42:46-0400 [scrapy] INFO: wtf
+2013-07-27 17:42:53-0400 [scrapy] INFO: wtf
+2013-07-27 17:43:02-0400 [scrapy] INFO: wtf
+2013-07-27 17:43:11-0400 [scrapy] INFO: wtf
+2013-07-27 17:43:20-0400 [scrapy] INFO: wtf
+2013-07-27 17:43:27-0400 [scrapy] INFO: wtf
+2013-07-27 17:43:32-0400 [power] INFO: Crawled 14 pages (at 14 pages/min), scraped 200 items (at 200 items/min)
+2013-07-27 17:43:33-0400 [scrapy] INFO: wtf
+2013-07-27 17:43:39-0400 [power] INFO: Closing spider (finished)
+2013-07-27 17:43:39-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 14450,
+	 'downloader/request_count': 27,
+	 'downloader/request_method_count/GET': 17,
+	 'downloader/request_method_count/POST': 10,
+	 'downloader/response_bytes': 220448,
+	 'downloader/response_count': 27,
+	 'downloader/response_status_count/200': 17,
+	 'downloader/response_status_count/302': 10,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 21, 43, 39, 515838),
+	 'item_scraped_count': 208,
+	 'log_count/INFO': 13,
+	 'request_depth_max': 16,
+	 'response_received_count': 17,
+	 'scheduler/dequeued': 27,
+	 'scheduler/dequeued/memory': 27,
+	 'scheduler/enqueued': 27,
+	 'scheduler/enqueued/memory': 27,
+	 'start_time': datetime.datetime(2013, 7, 27, 21, 42, 32, 811555)}
+2013-07-27 17:43:39-0400 [power] INFO: Spider closed (finished)
+2013-07-27 17:45:24-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 17:45:24-0400 [power] INFO: Spider opened
+2013-07-27 17:45:24-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 17:45:24-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 17:45:38-0400 [scrapy] INFO: wtf
+2013-07-27 17:45:46-0400 [scrapy] INFO: wtf
+2013-07-27 17:45:55-0400 [scrapy] INFO: wtf
+2013-07-27 17:46:04-0400 [scrapy] INFO: wtf
+2013-07-27 17:46:12-0400 [scrapy] INFO: wtf
+2013-07-27 17:46:19-0400 [scrapy] INFO: wtf
+2013-07-27 17:46:24-0400 [power] INFO: Crawled 14 pages (at 14 pages/min), scraped 200 items (at 200 items/min)
+2013-07-27 17:46:25-0400 [scrapy] INFO: wtf
+2013-07-27 17:46:32-0400 [power] INFO: Closing spider (finished)
+2013-07-27 17:46:32-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 14450,
+	 'downloader/request_count': 27,
+	 'downloader/request_method_count/GET': 17,
+	 'downloader/request_method_count/POST': 10,
+	 'downloader/response_bytes': 220415,
+	 'downloader/response_count': 27,
+	 'downloader/response_status_count/200': 17,
+	 'downloader/response_status_count/302': 10,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 21, 46, 32, 434076),
+	 'item_scraped_count': 208,
+	 'log_count/INFO': 13,
+	 'request_depth_max': 16,
+	 'response_received_count': 17,
+	 'scheduler/dequeued': 27,
+	 'scheduler/dequeued/memory': 27,
+	 'scheduler/enqueued': 27,
+	 'scheduler/enqueued/memory': 27,
+	 'start_time': datetime.datetime(2013, 7, 27, 21, 45, 24, 458323)}
+2013-07-27 17:46:32-0400 [power] INFO: Spider closed (finished)
+2013-07-27 17:46:44-0400 [scrapy] INFO: Scrapy 0.16.5 started (bot: power)
+2013-07-27 17:46:44-0400 [power] INFO: Spider opened
+2013-07-27 17:46:44-0400 [power] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2013-07-27 17:46:44-0400 [scrapy] INFO: STARTING SPIDER WITH NUMBER 2
+2013-07-27 17:46:58-0400 [scrapy] INFO: wtf
+2013-07-27 17:47:03-0400 [scrapy] INFO: wtf
+2013-07-27 17:47:09-0400 [scrapy] INFO: wtf
+2013-07-27 17:47:14-0400 [scrapy] INFO: wtf
+2013-07-27 17:47:19-0400 [scrapy] INFO: wtf
+2013-07-27 17:47:24-0400 [scrapy] INFO: wtf
+2013-07-27 17:47:28-0400 [scrapy] INFO: wtf
+2013-07-27 17:47:32-0400 [power] INFO: Closing spider (finished)
+2013-07-27 17:47:32-0400 [power] INFO: Dumping Scrapy stats:
+	{'downloader/request_bytes': 11048,
+	 'downloader/request_count': 20,
+	 'downloader/request_method_count/GET': 10,
+	 'downloader/request_method_count/POST': 10,
+	 'downloader/response_bytes': 126729,
+	 'downloader/response_count': 20,
+	 'downloader/response_status_count/200': 10,
+	 'downloader/response_status_count/302': 10,
+	 'finish_reason': 'finished',
+	 'finish_time': datetime.datetime(2013, 7, 27, 21, 47, 32, 383977),
+	 'item_scraped_count': 201,
+	 'log_count/INFO': 12,
+	 'request_depth_max': 9,
+	 'response_received_count': 10,
+	 'scheduler/dequeued': 20,
+	 'scheduler/dequeued/memory': 20,
+	 'scheduler/enqueued': 20,
+	 'scheduler/enqueued/memory': 20,
+	 'start_time': datetime.datetime(2013, 7, 27, 21, 46, 44, 689601)}
+2013-07-27 17:47:32-0400 [power] INFO: Spider closed (finished)

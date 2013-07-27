@@ -79,23 +79,33 @@ class PowerSpider(BaseSpider):
 
         # log.msg("Refining results with number %s and url %s" % (self.area_id, response.url), log.INFO)
         # estimated_use = [x.strip() for x in hxs.select('//div[@class="group clearfix"]/p/text()').extract() if x.strip()]
-        values = [int(x) for x in hxs.select('//select[@id="profile_electricity_plan_type"]/option/@value').extract()]
-        values.sort()
+        self.values = [int(x) for x in hxs.select('//select[@id="profile_electricity_plan_type"]/option/@value').extract()]
+        self.values.sort()
         index = int(response.meta['next'])
-        if index == len(values):
-            yield None
-        else:
-            if not self.result_url:
-                self.result_url = response.url
+        if not self.result_url:
+            self.result_url = response.url
+            # request = FormRequest(url=self.result_url.replace("results", "refine_results"),
+            #                                         formdata={'profile[electricity_plan_type]' : str(values[index]),
+            #                                                   'profile[discounts][EP]' : '1',
+            #                                                   'profile[discounts][PP]' : '1'},
+            #                                         callback=self.step_results,
+            #                                         dont_filter=True)
+            # request.meta['next'] = index+1
+        yield self.generate_new_category_request(index)
+    
+    def generate_new_category_request(self,index):
+        if index < len(self.values):
+            log.msg('wtf')
             request = FormRequest(url=self.result_url.replace("results", "refine_results"),
-                                                    formdata={'profile[electricity_plan_type]' : str(values[index]),
-                                                              'profile[discounts][EP]' : '1',
-                                                              'profile[discounts][PP]' : '1'},
-                                                    callback=self.step_results,
-                                                    dont_filter=True)
+                formdata={'profile[electricity_plan_type]' : str(self.values[index]),
+                'profile[discounts][EP]' : '1',
+                'profile[discounts][PP]' : '1'},
+                callback=self.step_results,
+                dont_filter=True)
             request.meta['next'] = index+1
-            yield request
-            
+            return request
+        return None
+
     
     
     def step_results(self, response):
@@ -165,7 +175,7 @@ class PowerSpider(BaseSpider):
                 
         result_request = Request(url=self.result_url, callback=self.pre_results, dont_filter=True)
         result_request.meta['next'] = response.meta['next']
-        yield result_request
+        yield self.generate_new_category_request(int(response.meta['next']))
         
             
     def step_deep_results(self, response):
