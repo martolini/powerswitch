@@ -8,8 +8,7 @@ from random import shuffle
 import MySQLdb as mdb
 from datetime import datetime
 from power.settings import MYSQL_SETTINGS
-import smtplib
-from power.settings import EMAIL_SENDER, EMAIL_RECIPIENT, EMAIL_SUBJECT
+
 
 class PowerSpider(BaseSpider):
     name = "power"
