@@ -105,7 +105,7 @@ class ThePipeline(object):
         server.starttls()
         server.ehlo()
         server.login(username,password)
-        server.sendmail(fromaddr, toaddrs, headers + "\r\n\r\n" + msg)
+        server.sendmail(EMAIL_SENDER, EMAIL_RECIPIENT, headers + "\r\n\r\n" + msg)
         server.quit()
 
 
