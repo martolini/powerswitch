@@ -16,7 +16,8 @@ class ThePipeline(object):
     new_items = []
 
     def close_spider(self, spider):
-        self.sendmail()
+        if self.new_items:
+            self.sendmail()
 
     def open_mysql(self):
         self.conn = mdb.connect(user=MYSQL_SETTINGS['user'], 
