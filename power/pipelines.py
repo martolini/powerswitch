@@ -8,9 +8,16 @@ from contextlib import closing
 from scrapy import log
 from power.items import AreaItem, PowerItem, CompanyItem, PlanItem
 from power.settings import MYSQL_SETTINGS
+import smtplib
+from power.settings import EMAIL_SENDER, EMAIL_RECIPIENT, EMAIL_SUBJECT
 
 
 class ThePipeline(object):
+    new_items = []
+
+    def close_spider(self, spider):
+        self.sendmail()
+
     def open_mysql(self):
         self.conn = mdb.connect(user=MYSQL_SETTINGS['user'], 
             passwd=MYSQL_SETTINGS['password'],
@@ -74,8 +81,32 @@ class ThePipeline(object):
                 self.insert_plan_info(cursor, info_id, item)
                 self.insert_plan_tariff_info(cursor, item['tariffs'], info_id)
                 self.insert_plan_discount_info(cursor, item['discounts'], info_id)
+                self.new_items.append(item)
         self.close_mysql()
         return item
+
+    def sendmail(self):
+        #Sending an email through gmail using Python - Raghuram Reddy
+        msg = "The following plans did not exist: "
+        for item in self.new_items:
+            msg = msg + "/r/n" + item['plan_name']
+        #provide gmail user name and password
+        username = 'alekfromserver'
+        password = 'martinroed'
+        headers = ["from: " + EMAIL_SENDER,
+               "subject: " + EMAIL_SUBJECT,
+               "to: " + EMAIL_RECIPIENT,
+               "mime-version: 1.0",
+               "content-type: text/html"]
+        headers = "\r\n".join(headers)
+        # functions to send an email
+        server = smtplib.SMTP('smtp.gmail.com:587')
+        server.ehlo()
+        server.starttls()
+        server.ehlo()
+        server.login(username,password)
+        server.sendmail(fromaddr, toaddrs, headers + "\r\n\r\n" + msg)
+        server.quit()
 
 
 

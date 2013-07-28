@@ -26,6 +26,10 @@ MYSQL_SETTINGS = {
 	'db': 'power',
 }
 
+EMAIL_SENDER = "alekfromserver@gmail.com"
+EMAIL_RECIPIENT = "martin@glide.cc"
+EMAIL_SUBJECT = "Update from server"
+
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

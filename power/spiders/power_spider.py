@@ -8,6 +8,8 @@ from random import shuffle
 import MySQLdb as mdb
 from datetime import datetime
 from power.settings import MYSQL_SETTINGS
+import smtplib
+from power.settings import EMAIL_SENDER, EMAIL_RECIPIENT, EMAIL_SUBJECT
 
 class PowerSpider(BaseSpider):
     name = "power"
@@ -151,6 +153,7 @@ class PowerSpider(BaseSpider):
                 request.meta['item'] = item
                 request.meta['next'] = response.meta['next']
                 if self.should_update_item(item):
+
                     yield request
                 
         gas_table = hxs.select('//table[@class="results gas checkbox_limit"]/tbody/tr')
