@@ -88,10 +88,9 @@ class ThePipeline(object):
         return item
 
     def sendmail(self):
-        #Sending an email through gmail using Python - Raghuram Reddy
         msg = "The following plans did not exist: "
         for item in self.new_items:
-            msg = msg + "/r/n" + item['plan_name']
+            msg = msg + "<br><br>" + item['area'] + " - " + item['company'] + " - " + item['plan']
         #provide gmail user name and password
         username = 'alekfromserver'
         password = 'martinroed'

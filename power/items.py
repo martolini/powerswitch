@@ -24,6 +24,7 @@ class PowerItem(Item):
     plan_id = Field()
     company = Field()
 
+    area = Field()
     price_total = Field()
     tariffs = Field()
     price_last_changed = Field()

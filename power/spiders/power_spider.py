@@ -209,6 +209,7 @@ class PowerSpider(BaseSpider):
         item['billing_options'] = self.find_billing_options(subnode_second)
         item['online_services'] = self.find_online_services(subnode_second)
         item['other_products'] = self.find_other_products(subnode_second)
+        item['area'] = self.area_name
         
         yield item
         
